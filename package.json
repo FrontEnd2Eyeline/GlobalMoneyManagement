@@ -1,8 +1,8 @@
 {
   "name": "gmm",
   "version": "1.0.0",
-  "description": "A Vue.js starter project for i18n websites",
-  "author": "Dobromir Hristov <dobri@digital-cult.com>",
+  "description": "GmmWeb proyect master",
+  "author": "Edwin Rendon",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
