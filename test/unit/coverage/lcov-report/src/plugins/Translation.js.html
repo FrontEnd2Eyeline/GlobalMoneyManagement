@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/plugins/Translation.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/plugins</a> Translation.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.41% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>21/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">79.17% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>19/24</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import axios from 'axios'
+import { SUPPORTED_LANGUAGES, DEFAULT_LANGUAGE } from '@/constants/trans'
+import { i18n } from '@/plugins/i18n'
+&nbsp;
+const Trans = {
+  get defaultLanguage () {
+    return DEFAULT_LANGUAGE
+  },
+  get supportedLanguages () {
+    return SUPPORTED_LANGUAGES
+  },
+  get currentLanguage () {
+    return i18n.locale
+  },
+  set currentLanguage (lang) {
+    i18n.locale = lang
+  },
+  /**
+   * Gets the first supported language that matches the user's
+   * @return {String}
+   */
+  getUserSupportedLang () <span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span>{</span>
+    const userPreferredLang = Trans.getUserLang()
+&nbsp;
+    // Check if user preferred browser lang is supported
+    if (Trans.isLangSupported(userPreferredLang.lang)) {
+      return userPreferredLang.lang
+    }
+    // Check if user preferred lang without the ISO is supported
+    if (Trans.isLangSupported(userPreferredLang.langNoISO)) {
+<span class="cstat-no" title="statement not covered" >      return userPreferredLang.langNoISO</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return Trans.defaultLanguage</span>
+  },
+  /**
+   * Returns the users preferred language
+   */
+  getUserLang () {
+    const <span class="branch-1 cbranch-no" title="branch not covered" >lang = <span class="branch-2 cbranch-no" title="branch not covered" >w</span>indow.</span>navigator.language || window.navigator.userLanguage || Trans.defaultLanguage
+    return {
+      lang: lang,
+      langNoISO: lang.split('-')[0]
+    }
+  },
+  /**
+   * Sets the language to various services (axios, the html tag etc)
+   * @param {String} lang
+   * @return {String} lang
+   */
+  setI18nLanguageInServices (lang) {
+    Trans.currentLanguage = lang
+    axios.defaults.headers.common['Accept-Language'] = lang
+    document.querySelector('html').setAttribute('lang', lang)
+    return lang
+  },
+  /**
+   * Loads new translation messages and changes the language when finished
+   * @param lang
+   * @return {Promise&lt;any&gt;}
+   */
+  changeLanguage (lang) {
+    if (!Trans.isLangSupported(lang)) return Promise.reject(new Error('Language not supported'))
+    if (i18n.locale === lang) return Promise.resolve(lang) // has been loaded prior
+    return Trans.loadLanguageFile(lang).then(msgs =&gt; {
+      i18n.setLocaleMessage(lang, msgs.default || msgs)
+      return Trans.setI18nLanguageInServices(lang)
+    })
+  },
+  /**
+   * Async loads a translation file
+   * @param lang
+   * @return {Promise&lt;*&gt;|*}
+   */
+  loadLanguageFile (lang) {
+    return import(/* webpackChunkName: "lang-[request]" */ `@/lang/${lang}.json`)
+  },
+  /**
+   * Checks if a lang is supported
+   * @param {String} lang
+   * @return {boolean}
+   */
+  isLangSupported (lang) {
+    return Trans.supportedLanguages.includes(lang)
+  },
+  /**
+   * Checks if the route's param is supported, if not, redirects to the first supported one.
+   * @param {Route} to
+   * @param {Route} from
+   * @param {Function} next
+   * @return {*}
+   */
+  routeMiddleware (to, from, next) {
+    // Load async message files here
+    const <span class="cstat-no" title="statement not covered" >lang = </span>to.params.lang
+<span class="cstat-no" title="statement not covered" >    if (!Trans.isLangSupported(lang)) <span class="cstat-no" title="statement not covered" >r</span>eturn </span>next(Trans.getUserSupportedLang())
+<span class="cstat-no" title="statement not covered" >    return Trans.changeLanguage(lang).then(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =&gt; </span>n</span></span>ext())
+  }
+}
+&nbsp;
+export { Trans }
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 10 2019 09:32:11 GMT-0500 (Colombia Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

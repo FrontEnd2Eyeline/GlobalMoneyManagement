@@ -1,0 +1,2 @@
+webpackJsonp([3],{"Wpy+":function(e,p){e.exports={welcome_message:"Добре дошли във Вашият Vue.js App",popular_links:"Популярни линкове",ecosystem:"Екосистема"}}});
+//# sourceMappingURL=3.a04044c54e6926ae35bb.js.map
