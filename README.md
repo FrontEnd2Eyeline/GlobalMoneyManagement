@@ -1,4 +1,4 @@
-# vue-i18n-starter
+# GmmAppWeb
 
 > A Vue.js starter project for i18n websites
 
