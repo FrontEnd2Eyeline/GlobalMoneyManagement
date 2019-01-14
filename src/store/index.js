@@ -9,7 +9,12 @@ export const store = new Vuex.Store({
   state: {
     layout: 'login-layout',
     user: {},
-    token: ''
+    token: localStorage.getItem('access-token') || '',
+    status: ''
+  },
+  getters: {
+    isAuthenticated: state => !!state.token,
+    authStatus: state => state.status
   },
   mutations: {
     SET_LAYOUT (state, newLayout) {
@@ -20,6 +25,16 @@ export const store = new Vuex.Store({
     },
     SET_TOKEN (state, token) {
       state.token = token
+    },
+    AUTH_REQUEST (state) {
+      state.status = 'loading'
+    },
+    AUTH_SUCCESS  (state, token) {
+      state.status = 'success'
+      state.token = token
+    },
+    AUTH_ERROR (state) {
+      state.status = 'error'
     }
   },
   actions: {

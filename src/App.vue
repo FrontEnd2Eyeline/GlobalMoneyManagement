@@ -82,21 +82,13 @@
   import LoginLayout from '@/components/layouts/Login'
   import HomeLayout from '@/components/layouts/Home'
   import RegisterLayout from '@/pages/Register'
+  import Index from '@/pages/Index'
   import {mapState} from 'vuex'
 
   export default {
-    components: {
-      TheLanguageSwitcher, LoginLayout, HomeLayout, RegisterLayout
-    },
-    data () {
-      return {
-        loginControl: false
-      }
-    },
-    computed: mapState(['layout']),
-    created () {
-      console.log(this.loginControl)
-      if (AuthUser.isLogged) {
+    mounted: function () {
+      console.log('aut', AuthUser.isLogged())
+      if (AuthUser.isLogged()) {
         this.loginControl = true
         console.log('cambió a true')
         console.log(this.loginControl)
@@ -106,6 +98,17 @@
       }
       console.log(this.loginControl)
     },
+    components: {
+      TheLanguageSwitcher, LoginLayout, HomeLayout, RegisterLayout, Index
+    },
+    data () {
+      return {
+        loginControl: false
+      }
+    },
+    computed: mapState(['layout']),
+    created () {
+    },
     methods: {
       logout () {
         localStorage.removeItem('access-token')
@@ -114,7 +117,7 @@
         this.loginControl = false
         this.$router.push(this.$route.query.replace || ({name: 'login'}))
         console.log(localStorage)
-        console.log('token auth', AuthUser.user.serializeToken)
+        console.log('token auth', window.localStorage)
       }
     }
   }

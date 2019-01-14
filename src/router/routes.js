@@ -14,19 +14,24 @@ export default [
     beforeEnter: Trans.routeMiddleware,
     children: [
       {
-        path: '',
+        path: 'login',
         name: 'login',
         component: load('Login')
       },
       {
-        path: '/:lang/home/',
+        path: 'home',
         name: 'home',
         component: load('Home')
       },
       {
-        path: '/:lang/register',
+        path: 'register',
         name: 'register',
         component: load('Register')
+      },
+      {
+        path: '',
+        name: 'index',
+        component: load('Index')
       },
       {
         path: '*',

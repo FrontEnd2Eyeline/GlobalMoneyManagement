@@ -12,12 +12,19 @@
   import App from '@/App'
 
   export default {
-    created () {
-      console.log(App.loginControl)
+    mounted: function () {
+      console.log(AuthUser.isLogged())
+      console.log('está logeado', App.loginControl)
       this.$store.commit('SET_LAYOUT', 'home-layout')
-      if (!AuthUser.isLogged) {
+      if (!AuthUser.isLogged()) {
         this.$router.replace({name: 'login'})
       }
+    },
+    created () {
+
+    },
+    beforeDestroy () {
+
     }
   }
 </script>

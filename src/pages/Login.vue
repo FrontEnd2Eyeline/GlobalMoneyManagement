@@ -75,8 +75,11 @@
         this.error = false
         this.success = true
         App.loginControl = true
-        this.$router.replace(this.$route.query.replace = ({name: 'home'}))
-        location.reload();
+
+        this.$router.push({name: 'home'})
+        this.$nextTick(function () {
+          console.log('a ver que hacer')
+        })
         console.log(this.$router.currentRoute)
       },
       loginFail () {

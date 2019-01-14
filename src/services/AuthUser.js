@@ -1,8 +1,9 @@
 import Api from './Api'
+import App from '@/App'
 
 class AuthUser {
   static user = {
-    serializeToken: ''
+    serializeToken: false
   }
 
   static accessParam () {
@@ -17,7 +18,11 @@ class AuthUser {
       Api.post('/auth/login', {email: user, password: password})
         .then(data => {
           console.log(data)
+          const token = data.data.serializeToken
           this.setUser(data.data)
+          localStorage.setItem('access-token', token)
+          // commit('AUTH_SUCCESS', token)
+          // dispatch('USER_REQUEST')
           resolve(data)
           console.log('logeo bien', data)
         }).catch(err => {
@@ -29,20 +34,21 @@ class AuthUser {
 
   static setUser (user) {
     this.user = user
-    this.user.serializeToken = user.serializeToken
+
     console.log('usuario', this.user)
     console.log('token', this.user.serializeToken)
-    window.localStorage.setItem('user', JSON.stringify(user))
-    window.localStorage.setItem('access-token', JSON.stringify(user.serializeToken))
+    localStorage.setItem('user', user)
   }
 
   static isLogged () {
-    if (this.user.serializeToken) {
+    if (localStorage.getItem('access-token')) {
+      console.log('auttttt true', this.user.serializeToken)
+      App.loginControl = true
       return true
     } else {
+      console.log('auttttt', this.user.serializeToken)
       return false
     }
-    console.log('token control', this.user.serializeToken)
   }
 }
 
