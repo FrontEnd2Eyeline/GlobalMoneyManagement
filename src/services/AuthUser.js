@@ -2,7 +2,7 @@ import Api from './Api'
 
 class AuthUser {
   static user = {
-    serializeToken: null
+    serializeToken: ''
   }
 
   static accessParam () {
@@ -39,8 +39,10 @@ class AuthUser {
   static isLogged () {
     if (this.user.serializeToken) {
       return true
+    } else {
+      return false
     }
-    return false
+    console.log('token control', this.user.serializeToken)
   }
 }
 

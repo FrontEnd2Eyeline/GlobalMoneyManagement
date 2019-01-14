@@ -1,5 +1,5 @@
 <template>
-  <el-container >
+  <el-container id="app">
 
     <el-aside v-show="loginControl" width="200px" style="background-color: rgb(238, 241, 246)">
       <el-menu :default-openeds="['1', '3']">
@@ -51,8 +51,10 @@
       </el-menu>
     </el-aside>
 
+
     <el-container>
-      <el-header v-if="loginControl" style="text-align: right; font-size: 12px">
+
+      <el-header v-show="loginControl" style="text-align: right; font-size: 12px">
         <el-dropdown>
           <i class="el-icon-setting" style="margin-right: 15px"></i>
           <el-dropdown-menu slot="dropdown">
@@ -62,7 +64,9 @@
           </el-dropdown-menu>
         </el-dropdown>
         <span>Tom</span>
+        <el-button @click="logout">LogOut</el-button>
       </el-header>
+
       <el-main>
         <component :is="layout"></component>
       </el-main>
@@ -91,12 +95,27 @@
     },
     computed: mapState(['layout']),
     created () {
+      console.log(this.loginControl)
       if (AuthUser.isLogged) {
         this.loginControl = true
+        console.log('cambió a true')
+        console.log(this.loginControl)
+      } else {
+        this.loginControl = false
+        console.log('cambió a false')
       }
-      this.loginControl = false
-
       console.log(this.loginControl)
+    },
+    methods: {
+      logout () {
+        localStorage.removeItem('access-token')
+        localStorage.removeItem('user')
+        AuthUser.user.serializeToken = ''
+        this.loginControl = false
+        this.$router.push(this.$route.query.replace || ({name: 'login'}))
+        console.log(localStorage)
+        console.log('token auth', AuthUser.user.serializeToken)
+      }
     }
   }
 </script>

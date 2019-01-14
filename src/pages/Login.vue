@@ -27,6 +27,7 @@
 <script>
   import AuthUser from '../services/AuthUser'
   import {required, minLength} from 'vuelidate/lib/validators'
+  import App from '@/App'
 
   export default {
     created () {
@@ -73,7 +74,9 @@
         }
         this.error = false
         this.success = true
+        App.loginControl = true
         this.$router.replace(this.$route.query.replace = ({name: 'home'}))
+        location.reload();
         console.log(this.$router.currentRoute)
       },
       loginFail () {

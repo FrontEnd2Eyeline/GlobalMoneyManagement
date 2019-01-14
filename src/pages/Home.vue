@@ -9,12 +9,13 @@
 
 <script>
   import AuthUser from '@/services/AuthUser'
+  import App from '@/App'
 
   export default {
     created () {
+      console.log(App.loginControl)
       this.$store.commit('SET_LAYOUT', 'home-layout')
-      console.log(AuthUser.isLogged())
-      if (!AuthUser.isLogged()) {
+      if (!AuthUser.isLogged) {
         this.$router.replace({name: 'login'})
       }
     }
