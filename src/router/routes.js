@@ -15,12 +15,8 @@ export default [
     children: [
       {
         path: '',
-        name: 'HelloWorld',
-        component: load('HelloWorld')
-      },
-      {
-        path: '*',
-        component: load('404')
+        name: 'login',
+        component: load('Login')
       },
       {
         path: '/:lang/home/',
@@ -31,6 +27,10 @@ export default [
         path: '/:lang/register',
         name: 'register',
         component: load('Register')
+      },
+      {
+        path: '*',
+        component: load('404')
       }
     ]
   },

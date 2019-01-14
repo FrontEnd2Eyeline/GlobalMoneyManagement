@@ -35,6 +35,13 @@ class AuthUser {
     window.localStorage.setItem('user', JSON.stringify(user))
     window.localStorage.setItem('access-token', JSON.stringify(user.serializeToken))
   }
+
+  static isLogged () {
+    if (this.user.serializeToken) {
+      return true
+    }
+    return false
+  }
 }
 
 export default AuthUser

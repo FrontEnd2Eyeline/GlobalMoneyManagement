@@ -68,6 +68,7 @@
 
       <md-snackbar :md-active.sync="userSaved">{{ lastUser }}</md-snackbar>
     </form>
+    <router-view></router-view>
   </div>
 </template>
 

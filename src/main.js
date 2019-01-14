@@ -12,7 +12,13 @@ import VueMaterial from 'vue-material'
 import Vuelidate from 'vuelidate'
 import router from './router'
 import { i18n } from './plugins/i18n'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import Vuex from 'vuex'
+import {store} from './store'
 
+Vue.use(Vuex)
+Vue.use(ElementUI)
 Vue.use(Vuelidate)
 Vue.use(Vuesax)
 Vue.use(VueMaterial)
@@ -24,6 +30,7 @@ Vue.config.productionTip = false
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  store,
   router,
   i18n,
   Api,

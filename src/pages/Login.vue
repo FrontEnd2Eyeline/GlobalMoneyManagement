@@ -1,6 +1,4 @@
 <template>
-
-
   <div class="login-wrapper border border-light">
     <form class="form-signin" @submit.prevent="login">
       <h2 class="form-signin-heading">Please sign in</h2>
@@ -31,8 +29,9 @@
   import {required, minLength} from 'vuelidate/lib/validators'
 
   export default {
-
-    name: 'Login',
+    created () {
+      this.$store.commit('SET_LAYOUT', 'login-layout')
+    },
     data () {
       return {
         email: '',
@@ -63,7 +62,6 @@
             this.loginSucess(data)
           }).catch(error => {
             this.loginFail()
-
             console.log('error en el login.vue', error)
           })
       },
@@ -75,13 +73,15 @@
         }
         this.error = false
         this.success = true
-        this.$router.push({name: 'home'})
+        this.$router.replace(this.$route.query.replace = ({name: 'home'}))
+        console.log(this.$router.currentRoute)
       },
       loginFail () {
         this.error = 'Login failed!'
       },
       goTo () {
-        this.$router.push({name: 'register'})
+        this.$router.push(this.$route.query.replace || ({name: 'register'}))
+        console.log(this.$router.currentRoute)
       }
     }
   }

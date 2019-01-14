@@ -1,13 +1,23 @@
 <template>
-  <div class="home">
-<label>Hola</label>
-    <router-view/>
+  <div>
+    <label>Hola</label>
+
   </div>
+
+
 </template>
 
 <script>
+  import AuthUser from '@/services/AuthUser'
+
   export default {
-    name: 'Home'
+    created () {
+      this.$store.commit('SET_LAYOUT', 'home-layout')
+      console.log(AuthUser.isLogged())
+      if (!AuthUser.isLogged()) {
+        this.$router.replace({name: 'login'})
+      }
+    }
   }
 </script>
 
