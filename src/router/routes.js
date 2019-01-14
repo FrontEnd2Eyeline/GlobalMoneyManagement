@@ -14,7 +14,7 @@ export default [
     beforeEnter: Trans.routeMiddleware,
     children: [
       {
-        path: 'login',
+        path: '',
         name: 'login',
         component: load('Login')
       },
@@ -27,11 +27,6 @@ export default [
         path: 'register',
         name: 'register',
         component: load('Register')
-      },
-      {
-        path: '',
-        name: 'index',
-        component: load('Index')
       },
       {
         path: '*',

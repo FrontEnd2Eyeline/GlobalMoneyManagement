@@ -82,7 +82,6 @@
   import LoginLayout from '@/components/layouts/Login'
   import HomeLayout from '@/components/layouts/Home'
   import RegisterLayout from '@/pages/Register'
-  import Index from '@/pages/Index'
   import {mapState} from 'vuex'
 
   export default {
@@ -99,7 +98,7 @@
       console.log(this.loginControl)
     },
     components: {
-      TheLanguageSwitcher, LoginLayout, HomeLayout, RegisterLayout, Index
+      TheLanguageSwitcher, LoginLayout, HomeLayout, RegisterLayout
     },
     data () {
       return {
