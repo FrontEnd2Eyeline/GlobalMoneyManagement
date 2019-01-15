@@ -3,12 +3,14 @@ import App from '@/App'
 
 class AuthUser {
   static user = {
-    serializeToken: false
+    serializeToken: false,
+    token: ''
   }
 
   static accessParam () {
-    if (this.user != null) {
-      return this.user.serializeToken
+    if (this.user) {
+      this.user.token = localStorage.getItem('access-token')
+      return this.user.token
     }
     return null
   }
