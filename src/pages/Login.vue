@@ -1,26 +1,38 @@
 <template>
-  <div class="login-wrapper border border-light">
-    <form class="form-signin" @submit.prevent="login">
-      <h2 class="form-signin-heading">Please sign in</h2>
-      <div class="alert alert-danger" v-if="error">{{ error }}</div>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <vs-input :success="success" success-text="The mail is valid" v-model.trim="$v.email.$model" type="email"
-                id="inputEmail" class="form-control" placeholder="Email address"
-                autofocus></vs-input>
-      <vs-alert active="true" color="danger" class="error" v-if="!$v.email.required">Field is required</vs-alert>
-      <vs-alert active="true" color="danger" class="error" v-if="!$v.email.minLength">Name must have at least
-        {{$v.email.$params.minLength.min}} letters.
-      </vs-alert>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <vs-input :class="status($v.email)" v-model="password" type="password" id="inputPassword"
-                class="form-control" placeholder="Password"
-      ></vs-input>
+  <div class="login-wrapper border border-light center">
+    <form class="form-signin center" @submit.prevent="login">
+      <div class="marbut">
+        <h2 class="form-signin-heading">{{$t('Login')}}</h2>
+      </div>
 
-      <br>
-      <vs-button class="btn btn-lg btn-primary btn-block" vs-type="submit">Sign in</vs-button>
+      <div class="alert alert-danger center" v-if="error">
+        {{ error }}
+      </div>
+      <!--<label for="inputEmail" class="sr-only">Email address</label>-->
+      <div class="marBut10px">
+        <vs-input :success="success" success-text="The mail is valid" v-model.trim="$v.email.$model" type="email"
+                  id="inputEmail" class="form-control center" v-bind:placeholder="$t('Email')"
+                  autofocus></vs-input>
+        <vs-alert active="true" color="danger" class="error" v-if="!$v.email.required">Field is required</vs-alert>
+        <vs-alert active="true" color="danger" class="error" v-if="!$v.email.minLength">Name must have at least
+          {{$v.email.$params.minLength.min}} letters.
+        </vs-alert>
+      </div>
+      <div class="marBut10px">
+        <!--<label for="inputPassword" class="sr-only">Password</label>-->
+        <vs-input :class="status($v.email)" v-model="password" type="password" id="inputPassword"
+                  class="form-control center" v-bind:placeholder="$t('Password')">
+        </vs-input>
+      </div>
+
+      <div class="marBut10px">
+        <vs-button class="btn btn-lg btn-primary btn-block" vs-type="submit">{{$t('Login')}}</vs-button>
+      </div>
 
     </form>
-    <vs-button class="btn btn-lg btn-primary btn-block" @click="goTo" value="false">Register</vs-button>
+    <div>
+      <vs-button class="btn btn-lg btn-primary btn-block" @click="goTo" value="false">{{$t('Register')}}</vs-button>
+    </div>
   </div>
 </template>
 
@@ -30,10 +42,10 @@
   import App from '@/App'
 
   export default {
-    created () {
+    created() {
       this.$store.commit('SET_LAYOUT', 'login-layout')
     },
-    data () {
+    data() {
       return {
         email: '',
         password: '',
@@ -50,23 +62,23 @@
     },
 
     methods: {
-      status (validation) {
+      status(validation) {
         return {
           error: validation.$error,
           dirty: validation.$dirty
         }
       },
-      login () {
+      login() {
         AuthUser.login(this.email, this.password)
           .then(data => {
             console.log('inicio sesion', data)
             this.loginSucess(data)
           }).catch(error => {
-            this.loginFail()
-            console.log('error en el login.vue', error)
-          })
+          this.loginFail()
+          console.log('error en el login.vue', error)
+        })
       },
-      loginSucess (req) {
+      loginSucess(req) {
         console.log(req)
         if (!req.data.serializeToken) {
           this.loginFail()
@@ -82,10 +94,10 @@
         })
         console.log(this.$router.currentRoute)
       },
-      loginFail () {
+      loginFail() {
         this.error = 'Login failed!'
       },
-      goTo () {
+      goTo() {
         this.$router.push(this.$route.query.replace || ({name: 'register'}))
         console.log(this.$router.currentRoute)
       }
@@ -94,6 +106,25 @@
 </script>
 
 <style lang="css" scoped>
+
+  /*Alineación*/
+
+  .center {
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
+
+  /*Márgenes*/
+
+  .marbut {
+    margin-bottom: 1%;
+  }
+
+  .marBut10px {
+    margin-bottom: 10px;
+  }
+
   pre {
     width: 100%;
     color: rgba(255, 255, 255, .8);
