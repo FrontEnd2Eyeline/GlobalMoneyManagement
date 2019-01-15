@@ -9,7 +9,7 @@ export const store = new Vuex.Store({
   state: {
     layout: 'login-layout',
     user: {},
-    token: localStorage.getItem('access-token') || '',
+    token: '', // localStorage.getItem('access-token') || '',
     status: ''
   },
   getters: {
