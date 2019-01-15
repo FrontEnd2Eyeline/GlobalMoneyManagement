@@ -42,10 +42,10 @@
   import App from '@/App'
 
   export default {
-    created() {
+    created () {
       this.$store.commit('SET_LAYOUT', 'login-layout')
     },
-    data() {
+    data () {
       return {
         email: '',
         password: '',
@@ -62,23 +62,23 @@
     },
 
     methods: {
-      status(validation) {
+      status (validation) {
         return {
           error: validation.$error,
           dirty: validation.$dirty
         }
       },
-      login() {
+      login () {
         AuthUser.login(this.email, this.password)
           .then(data => {
             console.log('inicio sesion', data)
             this.loginSucess(data)
           }).catch(error => {
-          this.loginFail()
-          console.log('error en el login.vue', error)
-        })
+            this.loginFail()
+            console.log('error en el login.vue', error)
+          })
       },
-      loginSucess(req) {
+      loginSucess (req) {
         console.log(req)
         if (!req.data.serializeToken) {
           this.loginFail()
@@ -94,10 +94,10 @@
         })
         console.log(this.$router.currentRoute)
       },
-      loginFail() {
+      loginFail () {
         this.error = 'Login failed!'
       },
-      goTo() {
+      goTo () {
         this.$router.push(this.$route.query.replace || ({name: 'register'}))
         console.log(this.$router.currentRoute)
       }

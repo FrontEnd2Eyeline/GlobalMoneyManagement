@@ -19,7 +19,6 @@
                       v-else-if="!$v.form.nombre.minlength">Invalid first name</span>
               </md-field>
             </div>
-
           </div>
           <div class="md-layout md-gutter">
             <div class="md-layout-item md-small-size-100">
@@ -75,7 +74,6 @@
             </div>
           </div>
 
-
           <md-field :class="getValidationClass('email')">
             <label for="email">Email</label>
             <md-input type="email" name="email" id="email" autocomplete="email" v-model="form.email"
@@ -105,7 +103,8 @@
   import {
     required,
     email,
-    minLength
+    minLength,
+    maxLength
   } from 'vuelidate/lib/validators'
   import Api from '../services/Api'
 
@@ -119,7 +118,8 @@
         paisId: null,
         email: null,
         apellido: null,
-        planId: null
+        planId: null,
+        patrocinadorId: null
       },
       countries: [],
       userSaved: false,
@@ -145,11 +145,14 @@
         },
         email: {
           required,
-          email
+          email,
+          minLength: minLength(6),
+          maxLength: maxLength(40)
         },
         paisId: {
           required
-        }
+        },
+        patrocinadorId: {}
       }
     },
     created: function () {
@@ -169,6 +172,7 @@
       saveUser () {
         console.log('id pais', this.form.paisId)
         console.log('id pakc', this.form.planId)
+        console.log('datos', this.form)
         Api.post('/auth/registro',
           this.form
         ).then(data => {
