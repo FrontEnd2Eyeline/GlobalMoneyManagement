@@ -1,10 +1,10 @@
 <template>
   <el-container class="backHeader">
-
+<Icoins></Icoins>
     <el-main>
       <div class="login-wrapper border border-light center">
         <form class="form-signin center" @submit.prevent="login">
-          <div class="marbut">
+          <div>
             <h2 class="form-signin-heading fontTitulosW">{{$t('Login')}}</h2>
           </div>
           <div class="alert alert-danger center" v-if="error">
@@ -152,13 +152,14 @@
   import {required, minLength} from 'vuelidate/lib/validators'
   import App from '@/App'
   import Footer from '../components/components/Footer'
+  import Icoins from '../components/components/Icoins'
 
-  export default {
-    components: {Footer},
-    created() {
+export default {
+    components: {Icoins, Footer},
+    created () {
       this.$store.commit('SET_LAYOUT', 'login-layout')
     },
-    data() {
+    data () {
       return {
         email: '',
         password: '',
@@ -175,23 +176,23 @@
     },
 
     methods: {
-      status(validation) {
+      status (validation) {
         return {
           error: validation.$error,
           dirty: validation.$dirty
         }
       },
-      login() {
+      login () {
         AuthUser.login(this.email, this.password)
           .then(data => {
             console.log('inicio sesion', data)
             this.loginSucess(data)
           }).catch(error => {
-          this.loginFail()
-          console.log('error en el login.vue', error)
-        })
+            this.loginFail()
+            console.log('error en el login.vue', error)
+          })
       },
-      loginSucess(req) {
+      loginSucess (req) {
         console.log(req)
         if (!req.data.serializeToken) {
           this.loginFail()
@@ -207,10 +208,10 @@
         })
         console.log(this.$router.currentRoute)
       },
-      loginFail() {
+      loginFail () {
         this.error = 'Login failed!'
       },
-      goTo() {
+      goTo () {
         this.$router.push(this.$route.query.replace || ({name: 'register'}))
         console.log(this.$router.currentRoute)
       }
