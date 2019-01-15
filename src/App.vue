@@ -67,9 +67,9 @@
         <el-button @click="logout">LogOut</el-button>
       </el-header>
 
-      <el-main>
+      <!--<el-main>-->
         <component :is="layout"></component>
-      </el-main>
+      <!--</el-main>-->
     </el-container>
 
   </el-container>
