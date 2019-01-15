@@ -1,5 +1,20 @@
 {
-  "welcome_message": "Welcome to Your Vue.js App",
-  "popular_links": "Popular Links",
-  "ecosystem": "Ecosystem"
+  "_Key_Login":"LOGIN",
+
+  "Login": "Login",
+  "Email": "Email",
+  "Password": "Password",
+  "Register": "Register",
+
+  "_Key_Errors":"ALERTS",
+
+  "1000": "The credentials are not correct",
+  "1001": "The token has not been sent in the request",
+  "1002": "The token is invalid",
+  "1003": "The user has already been confirmed",
+  "_Errors_Validations":"Errores de validación desde 1051 hasta 1100",
+  "1051": "The email is not valid",
+  "1052": "The email already exists",
+  "1053": "The name can not be empty",
+  "1054": "The user can not be empty"
 }

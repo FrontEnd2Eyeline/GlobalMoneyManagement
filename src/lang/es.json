@@ -1,0 +1,20 @@
+{
+  "_Key_Login":"LOGIN",
+
+  "Login": "Iniciar sesión",
+  "Email": "Correo electrónico",
+  "Password": "Contraseña",
+  "Register": "Registrar",
+
+  "_Key_Errors":"ALERTS",
+
+  "1000": "Las credenciales no son correctas",
+  "1001": "El token no ha sido enviado en la petición",
+  "1002": "El token es invalido",
+  "1003": "El usuario ya ha sido confirmado",
+  "_Errors_Validations":"Errores de validación desde 1051 hasta 1100",
+  "1051": "El correo electrónico no es válido",
+  "1052": "El correo electrónico ya existe",
+  "1053": "El nombre no puede estar vacio",
+  "1054": "El usuario no puede estar vacio"
+}
