@@ -16,5 +16,9 @@
   "1051": "El correo electrónico no es válido",
   "1052": "El correo electrónico ya existe",
   "1053": "El nombre no puede estar vacio",
-  "1054": "El usuario no puede estar vacio"
+  "1054": "El usuario no puede estar vacio",
+
+  "_Key_Register":"REGISTER",
+
+  "Register": "Registrarme"
 }

@@ -16,5 +16,9 @@
   "1051": "The email is not valid",
   "1052": "The email already exists",
   "1053": "The name can not be empty",
-  "1054": "The user can not be empty"
+  "1054": "The user can not be empty",
+
+  "_Key_Register":"REGISTER",
+
+  "Register": "Register"
 }
