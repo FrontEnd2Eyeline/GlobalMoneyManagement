@@ -45,10 +45,10 @@
       </el-row>
       <el-row :gutter="20">
         <div>
-          <el-col :lg="2">
+          <el-col :sm="2" :md="2" :lg="2">
             &nbsp;
           </el-col>
-          <el-col :md="24" :lg="5">
+          <el-col :xs="24" :sm="5" :md="5" :lg="5">
             <h5 class="fontTitFooter">
               GMM CLUB
             </h5>
@@ -76,7 +76,7 @@
               </li>
             </ul>
           </el-col>
-          <el-col :md="24" :lg="5">
+          <el-col :xs="24" :sm="5" :md="5" :lg="5">
             <h5 class="fontTitFooter">
               AYUDAS
             </h5>
@@ -101,7 +101,7 @@
               </li>
             </ul>
           </el-col>
-          <el-col :md="24" :lg="5">
+          <el-col :xs="24" :sm="5" :md="5" :lg="5">
             <h5 class="fontTitFooter">
               LEGALES
             </h5>
@@ -117,7 +117,7 @@
               </li>
             </ul>
           </el-col>
-          <el-col :md="24" :lg="5">
+          <el-col :xs="24" :sm="5" :md="5" :lg="5">
             <h5>
               &nbsp;
             </h5>
@@ -127,7 +127,7 @@
               </li>
               <li>
                 <div>
-                  <el-container>
+                  <el-container class="center2">
                     <div>
                         <el-row>
                         <div>
@@ -138,15 +138,15 @@
                       </el-row>
                     </div>
                     <div>
-                      <el-row>
-                        <div class="center2">
-                          <el-col :xs="8" :sm="4" :md="4" :lg="8">
+                      <el-row gutter="20">
+                        <div>
+                          <el-col :span="8" :sm="8" :md="8" :lg="8">
                             <img src="../../assets/Imgs/icono_facebook.png" alt="" class="icoRedes">
                           </el-col>
-                          <el-col :xs="8" :sm="4" :md="4" :lg="8">
+                          <el-col :span="8" :sm="8" :md="8" :lg="8">
                             <img src="../../assets/Imgs/icono_twitter.png" alt="" class="icoRedes">
                           </el-col>
-                          <el-col :xs="8" :sm="4" :md="4" :lg="8">
+                          <el-col :span="8" :sm="8" :md="8" :lg="8">
                             <img src="../../assets/Imgs/icono_instagram.png" alt="" class="icoRedes">
                           </el-col>
                         </div>
@@ -169,7 +169,7 @@
               </li>
             </ul>
           </el-col>
-          <el-col :lg="2">
+          <el-col  :sm="2" :md="2" :lg="2">
             &nbsp;
           </el-col>
         </div>
@@ -232,6 +232,7 @@
 
   .center2 {
     display: flex !important;
+    align-items: center !important;
     justify-content: center !important;
   }
 
@@ -256,14 +257,13 @@
 
   /*textos*/
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 767px) {
 
     .fontTitFooter {
       font-size: 1.3rem;
       color: #FFF;
-      text-align: left;
+      text-align: center;
       font-weight: bold;
-      padding-left: 5%;
     }
 
     .fontSiz {
@@ -286,9 +286,13 @@
       text-align: center !important;
     }
 
+    ul > li{
+      text-align: center;
+    }
+
   }
 
-  @media only screen and (min-width: 577px) and (max-width: 992px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
 
     .fontTitFooter {
       font-size: 1.3rem;
