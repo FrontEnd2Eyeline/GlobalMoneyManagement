@@ -1,114 +1,187 @@
 <template>
   <el-container>
     <el-footer>
-      <el-row>
-        <div class="backSectionFoot">
-          <el-col :lg="8">
-            <h1 class="fontTitFooter">
-              Global Money Management
-            </h1>
-          </el-col>
-          <el-col :lg="8">
-            <p>
-              Puedes abrir tu cuenta con un deposito de 0,1 BTC + 5% para trámites de operación. ¡Así de fácil!
-            </p>
-          </el-col>
-          <el-col :lg="8">
-            <el-button class="btnRegister" size="medium">
-              CREA TU CUENTA
-            </el-button>
-          </el-col>
-        </div>
-      </el-row>
-      <el-row>
-        <div class="backPrimary">
-          <el-col :lg="6">
-            <h5 class="fontTitFooter">
-              GMM CLUB
-            </h5>
-            <ul class="pie">
-              <li class="colorMenu">
-                Sobre Nosotros
-              </li>
-              <li class="colorMenu">
-                Divulgación
-              </li>
-              <li class="colorMenu">
-                Política
-              </li>
-              <li class="colorMenu">
-                Cumplimiento de la ley
-              </li>
-              <li class="colorMenu">
-                Responsabilidades
-              </li>
-            </ul>
-          </el-col>
-          <el-col :lg="6">
-            <h5 class="fontTitFooter">
-              AYUDAS
-            </h5>
-            <ul class="pie">
-              <li class="colorMenu">
-                Feedback
-              </li>
-              <li class="colorMenu">
-                Contacto
-              </li>
-              <li class="colorMenu">
-                Noticias
-              </li>
-              <li class="colorMenu">
-                Matricula
-              </li>
-            </ul>
-          </el-col>
-          <el-col :lg="6">
-            <h5 class="fontTitFooter">
-              LEGALES
-            </h5>
-            <ul class="pie">
-              <li class="colorMenu">
-                Términos y condiciones
-              </li>
-            </ul>
-          </el-col>
-          <el-col :lg="6">
-            <el-container>
-              <el-row>
-                <el-col :span="24">
-                  <img src="../../assets/Imgs/LogoText.png" class="icoGmmText" alt="">
-                </el-col>
-              </el-row>
-              <el-row>
-                <el-col :xs="8" :sm="4" :md="4" :lg="8">
-                  <img src="../../assets/Imgs/icono_facebook.png" alt="" class="icoRedes">
-                </el-col>
-                <el-col :xs="8" :sm="4" :md="4" :lg="8">
-                  <img src="../../assets/Imgs/icono_twitter.png" alt="" class="icoRedes">
-                </el-col>
-                <el-col :xs="8" :sm="4" :md="4" :lg="8">
-                  <img src="../../assets/Imgs/icono_instagram.png" alt="" class="icoRedes">
-                </el-col>
-              </el-row>
-              <el-row>
-                <el-col :span="24">
-                  <img src="../../assets/Imgs/Look.png" alt="" class="icoBits">
-                </el-col>
-              </el-row>
-            </el-container>
-          </el-col>
-        </div>
-      </el-row>
-      <el-row>
-        <div class="backSecundary">
+      <div class="backSectionFoot">
+        <el-row>
           <el-col :span="24">
-            <p>
-              Global Money Management, All Rights reserved - GMM CLUB LIMITED Gilmer Terrace, Wellington, 6011, Nueva Zelanda
-            </p>
+            &nbsp;
           </el-col>
-        </div>
-      </el-row>
+        </el-row>
+        <el-row gutter="20">
+          <div class="center">
+            <el-col :xs="24" :sm="24" :md="24" :lg="8">
+              <h1 class="fontSiz">
+                Global Money Management
+              </h1>
+            </el-col>
+            <el-col :xs="24" :sm="24" :md="24" :lg="8">
+              <div class="center">
+                <p class="fontSizecard2">
+                  Puedes abrir tu cuenta con un deposito de 0,1 BTC + 5% para trámites de operación. ¡Así de fácil!
+                </p>
+              </div>
+            </el-col>
+            <el-col :xs="24" :sm="24" :md="24" :lg="8">
+              <div class="center">
+                <el-button class="btnRegister" size="medium">
+                  CREA TU CUENTA
+                </el-button>
+              </div>
+            </el-col>
+          </div>
+        </el-row>
+        <el-row>
+          <el-col :span="24">
+            &nbsp;
+          </el-col>
+        </el-row>
+      </div>
+      <div class="backPrimary">
+        <el-row>
+          <el-col :span="24">
+            &nbsp;
+          </el-col>
+        </el-row>
+        <el-row :gutter="20">
+          <div>
+            <el-col :lg="2">
+              &nbsp;
+            </el-col>
+            <el-col :md="24" :lg="5">
+              <h5 class="fontTitFooter">
+                GMM CLUB
+              </h5>
+              <ul class="pie">
+                <li>
+                  &nbsp;
+                </li>
+                <li class="colorMenu">
+                  Sobre Nosotros
+                </li>
+                <li class="colorMenu">
+                  Divulgación
+                </li>
+                <li class="colorMenu">
+                  Política
+                </li>
+                <li class="colorMenu">
+                  Cumplimiento de la ley
+                </li>
+                <li class="colorMenu">
+                  Responsabilidades
+                </li>
+              </ul>
+            </el-col>
+            <el-col :md="24" :lg="5">
+              <h5 class="fontTitFooter">
+                AYUDAS
+              </h5>
+              <ul class="pie">
+                <li>
+                  &nbsp;
+                </li>
+                <li class="colorMenu">
+                  Feedback
+                </li>
+                <li class="colorMenu">
+                  Contacto
+                </li>
+                <li class="colorMenu">
+                  Noticias
+                </li>
+                <li class="colorMenu">
+                  Matricula
+                </li>
+              </ul>
+            </el-col>
+            <el-col :md="24" :lg="5">
+              <h5 class="fontTitFooter">
+                LEGALES
+              </h5>
+              <ul class="pie">
+                <li>
+                  &nbsp;
+                </li>
+                <li class="colorMenu">
+                  Términos y condiciones
+                </li>
+              </ul>
+            </el-col>
+            <el-col :md="24" :lg="5">
+              <h5>
+                &nbsp;
+              </h5>
+              <ul class="pie">
+                <li>
+                  <img src="../../assets/Imgs/LogoText.png" class="icoGmmText" alt="">
+                </li>
+                <li>
+                  <div>
+                    <el-container>
+                      <div>
+                        <el-row>
+                          <div>
+                            <el-col :span="24">
+                              &nbsp;
+                            </el-col>
+                          </div>
+                        </el-row>
+                      </div>
+                      <div>
+                        <el-row>
+                          <div>
+                            <el-col :xs="8" :sm="4" :md="4" :lg="8">
+                              <img src="../../assets/Imgs/icono_facebook.png" alt="" class="icoRedes">
+                            </el-col>
+                            <el-col :xs="8" :sm="4" :md="4" :lg="8">
+                              <img src="../../assets/Imgs/icono_twitter.png" alt="" class="icoRedes">
+                            </el-col>
+                            <el-col :xs="8" :sm="4" :md="4" :lg="8">
+                              <img src="../../assets/Imgs/icono_instagram.png" alt="" class="icoRedes">
+                            </el-col>
+                          </div>
+                        </el-row>
+                      </div>
+                      <div>
+                        <el-row>
+                          <div>
+                            <el-col :span="24">
+                              &nbsp;
+                            </el-col>
+                          </div>
+                        </el-row>
+                      </div>
+                    </el-container>
+                  </div>
+                </li>
+                <li>
+                  <img src="../../assets/Imgs/Look.png" alt="" class="icoBits">
+                </li>
+              </ul>
+            </el-col>
+            <el-col :lg="2">
+              &nbsp;
+            </el-col>
+          </div>
+        </el-row>
+        <el-row>
+          <el-col :span="24">
+            &nbsp;
+          </el-col>
+        </el-row>
+      </div>
+
+      <div class="backSecundary">
+        <el-row>
+          <div>
+            <el-col :span="24">
+              <p class="copyright">
+                Global Money Management, All Rights reserved - GMM CLUB LIMITED Gilmer Terrace, Wellington, 6011, Nueva Zelanda
+              </p>
+            </el-col>
+          </div>
+        </el-row>
+      </div>
     </el-footer>
   </el-container>
 </template>
@@ -120,6 +193,7 @@
 </script>
 
 <style scoped>
+
   /*Fondos*/
 
   .backSectionFoot {
@@ -131,11 +205,18 @@
   }
 
   .backPrimary{
-    background: #161d44 !important
+    background: #161d44 !important;
   }
 
   .backSecundary{
-    background: #576289 !important
+    background: #576289 !important;
+  }
+  /*Centrado*/
+
+  .center{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   /*Botones*/
@@ -157,24 +238,96 @@
     color: #FFF !important;
   }
 
-  .fontTitFooter{
-    font-size: 1.3rem;
-    color: #FFF;
-    text-align: left;
-    font-weight: bold;
-    padding-left: 5%;
+  /*textos*/
+
+  @media only screen and (max-width: 576px){
+    .fontTitFooter{
+      font-size: 1.3rem;
+      color: #FFF;
+      text-align: left;
+      font-weight: bold;
+      padding-left: 5%;
+    }
+
+    .fontSiz{
+      color: white !important;
+      line-height: 50px;
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .fontSizecard2{
+      font-size: 1.2em !important;
+      line-height: 50px;
+      color: white !important;
+      text-align: center;
+    }
+
+    .copyright{
+      color: #FFF !important;
+      text-align: center !important;
+    }
   }
 
-  .fontSiz{
-    color: white !important;
-    font-size: 3em;
-    text-align: center;
+  @media only screen and (min-width: 577px) and (max-width: 992px){
+
+    .fontTitFooter{
+      font-size: 1.3rem;
+      color: #FFF;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .fontSiz{
+      color: white !important;
+      line-height: 50px;
+      font-size: 3em;
+      text-align: center;
+    }
+
+    .fontSizecard2{
+      font-size: 1.5em !important;
+      line-height: 50px;
+      color: white !important;
+      text-align: center;
+    }
+
+    .copyright{
+      color: #FFF !important;
+      text-align: center !important;
+    }
+
   }
 
-  .fontSizecard2{
-    font-size: 1.2em !important;
-    color: white !important;
-    text-align: center
+  @media only screen and (min-width: 993px){
+
+    .fontTitFooter{
+      font-size: 1.7rem;
+      color: #FFF;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .fontSiz{
+      color: white !important;
+      font-size: 3.5em;
+      line-height: 50px;
+      text-align: center;
+      padding: 5%;
+    }
+
+    .fontSizecard2{
+      font-size: 1.8em!important;
+      line-height: 30px;
+      color: white !important;
+      text-align: left;
+      padding: 5%;
+    }
+
+    .copyright{
+      color: #FFF !important;
+      text-align: center !important;
+    }
   }
 
   a, a:hover{
@@ -184,22 +337,57 @@
 
   /*Imagenes*/
 
-  .icoGmmText{
-    width: 10em !important;
-    margin: 0 auto;
-    display: block;
+  @media only screen and (max-width: 576px){
+
+    .icoGmmText{
+      width: 10em !important;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .icoRedes{
+      width: 2.5em !important;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .icoBits{
+      width: 10em;
+      margin: 0 auto;
+      display: block;
+    }
   }
 
-  .icoRedes{
-    width: 2.5em !important;
-    margin: 0 auto;
-    display: block;
+  @media only screen and (min-width: 577px) and (max-width: 992px){
+
+    .icoGmmText{
+      width: 12em !important;
+    }
+
+    .icoRedes{
+      width: 3.5em !important;
+    }
+
+    .icoBits{
+      width: 12em;
+    }
   }
 
-  .icosBits{
-    width: 10em;
-    margin: 0 auto;
-    display: block;
+  @media only screen and (min-width: 993px){
+
+    .icoGmmText{
+      width: 12em !important;
+    }
+
+    .icoRedes{
+      width: 3.7em !important;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .icoBits{
+      width: 12em !important;
+    }
   }
 
 
