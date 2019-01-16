@@ -269,13 +269,15 @@
       color: white !important;
       font-size: 2.6em;
       text-align: center;
-      line-height: 50px;
+      line-height: 30px;
+      padding: 5%;
     }
 
     .fontSizecard2{
       font-size: 1.2em !important;
       color: white !important;
       text-align: center;
+      padding: 5%;
     }
 
     .copyright{
@@ -303,9 +305,10 @@
 
     .fontSizecard2{
       font-size: 1.5em !important;
-      line-height: 50px;
+      line-height: 30px;
       color: white !important;
       text-align: center;
+      padding: 5%;
     }
 
     .copyright{
