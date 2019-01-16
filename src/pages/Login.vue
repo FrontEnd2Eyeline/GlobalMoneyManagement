@@ -13,7 +13,7 @@
           <!--<label for="inputEmail" class="sr-only">Email address</label>-->
           <div class="marBut10px">
             <el-input :success="success" success-text="The mail is valid" v-model.trim="$v.email.$model" type="email"
-                      id="inputEmail" class="form-control center" v-bind:placeholder="$t('Email')"
+                      id="inputEmail" class="form-control center textWidht" v-bind:placeholder="$t('Email')"
                       autofocus></el-input>
             <el-alert active="true" color="danger" class="error" v-if="!$v.email.required">Field is required</el-alert>
             <el-alert active="true" color="danger" class="error" v-if="!$v.email.minLength">Name must have at least
@@ -23,7 +23,7 @@
           <div class="marBut10px">
             <!--<label for="inputPassword" class="sr-only">Password</label>-->
             <el-input :class="status($v.email)" v-model="password" type="password" id="inputPassword"
-                      class="form-control center" v-bind:placeholder="$t('Password')">
+                      class="form-control center textWidht" v-bind:placeholder="$t('Password')">
             </el-input>
           </div>
 
@@ -89,7 +89,9 @@
 
   /*Controls*/
 
-  vs-input--input {
+
+
+  input {
     text-align: center;
     position: relative;
     padding: .4rem;
@@ -101,7 +103,7 @@
     box-shadow: 0 0 0 0 rgba(0, 0, 0, .15);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-    width: 18%;
+    width: 18% !important;
   }
 
   .el-button {
@@ -146,6 +148,10 @@
     padding: 5%;
   }
 
+  .textWidht{
+    width: 18%;
+    text-align: center !important;
+  }
 
 
   /*Botones*/
