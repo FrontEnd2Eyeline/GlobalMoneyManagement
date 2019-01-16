@@ -7,27 +7,29 @@
             &nbsp;
           </el-col>
         </el-row>
-        <el-row gutter="20">
+        <el-row gutter="20" class="center2">
           <div class="center">
-            <el-col :xl="8">
+            <el-col :md="24" :lg="8">
               <h1 class="fontSiz">
                 Global Money Management
               </h1>
             </el-col>
-            <el-col :xl="8">
-              <div class="center">
+            <el-col :md="24" :lg="8">
+              <div>
                 <p class="fontSizecard2">
                   Puedes abrir tu cuenta con un deposito de 0,1 BTC + 5% para trámites de operación. ¡Así de fácil!
                 </p>
               </div>
             </el-col>
-            <el-col :xl="8">
-              <div class="center">
-                <el-button class="btnRegister" size="medium">
-                  CREA TU CUENTA
-                </el-button>
-              </div>
-            </el-col>
+            <div>
+              <el-col :md="24" :lg="8">
+                <div class="center2">
+                  <el-button class="btnRegister center" size="medium">
+                    CREA TU CUENTA
+                  </el-button>
+                </div>
+              </el-col>
+            </div>
           </div>
         </el-row>
         <el-row>
@@ -138,7 +140,7 @@
                       </div>
                       <div>
                         <el-row>
-                          <div>
+                          <div class="center2">
                             <el-col :xs="8" :sm="4" :md="4" :lg="8">
                               <img src="../../assets/Imgs/icono_facebook.png" alt="" class="icoRedes">
                             </el-col>
@@ -209,7 +211,6 @@
     background-image: url('../../assets/Imgs/fondo_espacio.png');
     background-repeat: initial;
     /* background-attachment: fixed; */
-    background-position: center center;
     /* background-size: cover; */
   }
 
@@ -223,8 +224,13 @@
   /*Centrado*/
 
   .center{
-    display: flex !important;
+    display: block !important;
     align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .center2{
+    display: flex !important;
     justify-content: center !important;
   }
 
@@ -250,6 +256,7 @@
   /*textos*/
 
   @media only screen and (max-width: 576px){
+
     .fontTitFooter{
       font-size: 1.3rem;
       color: #FFF;
@@ -260,22 +267,24 @@
 
     .fontSiz{
       color: white !important;
-      line-height: 50px;
-      font-size: 3em;
+      font-size: 2.6em;
       text-align: center;
+      line-height: 30px;
+      padding: 5%;
     }
 
     .fontSizecard2{
       font-size: 1.2em !important;
-      line-height: 50px;
       color: white !important;
       text-align: center;
+      padding: 5%;
     }
 
     .copyright{
       color: #FFF !important;
       text-align: center !important;
     }
+
   }
 
   @media only screen and (min-width: 577px) and (max-width: 992px){
@@ -296,9 +305,10 @@
 
     .fontSizecard2{
       font-size: 1.5em !important;
-      line-height: 50px;
+      line-height: 30px;
       color: white !important;
       text-align: center;
+      padding: 5%;
     }
 
     .copyright{
