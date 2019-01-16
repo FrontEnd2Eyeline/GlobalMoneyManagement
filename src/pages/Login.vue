@@ -111,29 +111,13 @@
   /*Textos*/
 
   .fontTitulosW {
-    font-size: 2.25rem;
+    font-size: 3.4em;
     color: #FFF;
     text-align: center;
     font-weight: bold;
     padding: 5%;
   }
 
-  .fontTitValorBitcoin {
-    font-size: 1.2em;
-    color: #FFF;
-    text-align: center;
-    font-family: Avenir;
-    font-weight: bold;
-  }
-
-  .fontValorBitcoin {
-    font-size: 0.7em;
-    color: #FFF;
-    text-align: right;
-    font-family: Avenir;
-    padding-bottom: 2%;
-    margin-top: -8%;
-  }
 
   /*Botones*/
 
