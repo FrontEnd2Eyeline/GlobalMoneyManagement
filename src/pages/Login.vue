@@ -12,23 +12,23 @@
           </div>
           <!--<label for="inputEmail" class="sr-only">Email address</label>-->
           <div class="marBut10px">
-            <vs-input :success="success" success-text="The mail is valid" v-model.trim="$v.email.$model" type="email"
+            <el-input :success="success" success-text="The mail is valid" v-model.trim="$v.email.$model" type="email"
                       id="inputEmail" class="form-control center" v-bind:placeholder="$t('Email')"
-                      autofocus></vs-input>
-            <vs-alert active="true" color="danger" class="error" v-if="!$v.email.required">Field is required</vs-alert>
-            <vs-alert active="true" color="danger" class="error" v-if="!$v.email.minLength">Name must have at least
+                      autofocus></el-input>
+            <el-alert active="true" color="danger" class="error" v-if="!$v.email.required">Field is required</el-alert>
+            <el-alert active="true" color="danger" class="error" v-if="!$v.email.minLength">Name must have at least
               {{$v.email.$params.minLength.min}} letters.
-            </vs-alert>
+            </el-alert>
           </div>
           <div class="marBut10px">
             <!--<label for="inputPassword" class="sr-only">Password</label>-->
-            <vs-input :class="status($v.email)" v-model="password" type="password" id="inputPassword"
+            <el-input :class="status($v.email)" v-model="password" type="password" id="inputPassword"
                       class="form-control center" v-bind:placeholder="$t('Password')">
-            </vs-input>
+            </el-input>
           </div>
 
           <div class="marBut10px">
-            <vs-button class="btn btn-lg bacgroundBtnOpacity btn-block" vs-type="submit">{{$t('Login')}}</vs-button>
+            <el-button class="btn btn-lg bacgroundBtnOpacity btn-block" vs-type="submit">{{$t('Login')}}</el-button>
           </div>
 
         </form>
@@ -101,7 +101,28 @@
     box-shadow: 0 0 0 0 rgba(0, 0, 0, .15);
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
-    width: 100%;
+    width: 18%;
+  }
+
+  .el-button {
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 0px solid #dcdfe6;
+    color: white;
+    -webkit-appearance: none;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    margin: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    font-weight: 500;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 4px;
   }
 
   /* BackGround */
