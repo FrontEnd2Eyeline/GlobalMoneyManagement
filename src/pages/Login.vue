@@ -45,7 +45,15 @@
 
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+
+  .el-footer {
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
 
   /*Alineación*/
 

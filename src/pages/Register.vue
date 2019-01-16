@@ -133,7 +133,7 @@
         </form>
       </div>
     </el-main>
-    <el-footer>
+    <el-footer >
      <Footer></Footer>
     </el-footer>
     <!--<router-view></router-view>-->
@@ -142,6 +142,15 @@
 
 
 <style lang="scss" scoped>
+
+  .el-footer {
+     padding: 0px;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     -ms-flex-negative: 0;
+     flex-shrink: 0;
+   }
+
   .md-progress-bar {
     position: absolute;
     top: 0;
