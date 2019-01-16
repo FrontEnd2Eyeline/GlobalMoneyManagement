@@ -3,35 +3,66 @@
     <el-main>
       <div>
         <el-row :gutter="10">
-          <el-col :md="4" :lg="6" >
+          <el-col :xm="24" :sm="12" :md="4" :lg="6" >
             <div >
               &nbsp;
             </div>
           </el-col>
-          <el-col :md="4" :lg="3" >
+          <el-col :xm="24" :sm="12" :md="4" :lg="3" >
             <div class="center ">
               <img class="widthIcos" src="../../assets/Imgs/Header/iconoBIT.png" >
+              <br>
+              <h3 class="fontTitValorBitcoin">
+                $4,479.09
+              </h3>
+              <br>
+              <h4 class="fontValorBitcoin">
+                BITCOIN
+              </h4>
             </div>
           </el-col>
-          <el-col :md="4" :lg="3" >
+          <el-col :xm="24" :sm="12" :md="4" :lg="3" >
             <div class="center ">
               <img class="widthIcos" src="../../assets/Imgs/Header/iconoMONERO.png" >
+              <br>
+              <h3 class="fontTitValorBitcoin">
+                $67.94
+              </h3>
+              <br>
+              <h4 class="fontValorBitcoin">
+                MONEIRO
+              </h4>
             </div>
           </el-col>
-          <el-col :md="4" :lg="3" >
+          <el-col :xm="24" :sm="12" :md="4" :lg="3" >
             <div class="center">
               <img class="widthIcos" src="../../assets/Imgs/Header/iconoZCASH.png" >
+              <br>
+              <h3 class="fontTitValorBitcoin">
+                $81.25
+              </h3>
+              <h4 class="fontValorBitcoin">
+                ZCASH
+              </h4>
             </div>
           </el-col>
-          <el-col :md="4" :lg="3" >
+          <el-col :xm="24" :sm="12" :md="4" :lg="3" >
             <div class="center">
               <img class="widthIcos" src="../../assets/Imgs/Header/iconoETHEREUM.png" >
+              <br>
+              <h3 class="fontTitValorBitcoin">
+                $130.92
+              </h3>
+              <h4 class="fontValorBitcoin">
+                ETHERIUM
+              </h4>
             </div>
           </el-col>
-          <el-col :md="4" :lg="6" >
+          <el-col :xm="24" :sm="12" :md="4" :lg="6" >
             <div >
               &nbsp;
-            </div></el-col>
+            </div>
+          </el-col>
         </el-row>
       </div>
     </el-main>
@@ -41,12 +72,29 @@
 
 <style scoped>
 
+/*Texto*/
+
+    .fontTitValorBitcoin{
+        font-size: 2rem;
+        color: #FFF;
+        text-align: center;
+        font-family: Avenir;
+        font-weight: bold;
+    }
+
+    .fontValorBitcoin{
+        font-size: 1.2rem;
+        color: #FFF;
+        text-align: center;
+        font-family: Avenir;
+        padding-bottom: 2%;
+    }
+
   .center{
     text-align: center;
     margin: auto;
     display: block;
   }
-
 
   .contenedor {
     position: relative;
@@ -170,7 +218,7 @@
 
 <script>
   export default {
-    name: "Icoins"
+    // name: "Icoins"
   }
 </script>
 
