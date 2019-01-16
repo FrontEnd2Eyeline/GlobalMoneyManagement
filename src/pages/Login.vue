@@ -12,9 +12,10 @@
           </div>
           <!--<label for="inputEmail" class="sr-only">Email address</label>-->
           <div class="marBut10px">
-            <el-input :success="success" success-text="The mail is valid" v-model.trim="$v.email.$model" type="email"
+            <el-input  :success="success" success-text="The mail is valid" v-model.trim="$v.email.$model" type="email"
                       id="inputEmail" class="form-control center textWidht" v-bind:placeholder="$t('Email')"
-                      autofocus></el-input>
+                      autofocus>
+            </el-input>
             <el-alert active="true" color="danger" class="error" v-if="!$v.email.required">Field is required</el-alert>
             <el-alert active="true" color="danger" class="error" v-if="!$v.email.minLength">Name must have at least
               {{$v.email.$params.minLength.min}} letters.
@@ -22,7 +23,7 @@
           </div>
           <div class="marBut10px">
             <!--<label for="inputPassword" class="sr-only">Password</label>-->
-            <el-input :class="status($v.email)" v-model="password" type="password" id="inputPassword"
+            <el-input style="text-align-last: center" :class="status($v.email)" v-model="password" type="password" id="inputPassword"
                       class="form-control center textWidht" v-bind:placeholder="$t('Password')">
             </el-input>
           </div>
@@ -46,6 +47,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 
   .el-footer {
     padding: 0px;
@@ -150,7 +152,7 @@
 
   .textWidht{
     width: 18%;
-    text-align: center !important;
+    text-align-last: center
   }
 
 
