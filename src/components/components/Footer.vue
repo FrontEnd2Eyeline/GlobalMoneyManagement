@@ -127,7 +127,7 @@
               </li>
               <li>
                 <div>
-                  <el-container class="center2">
+                  <el-container class="center">
                     <div>
                         <el-row>
                         <div>
@@ -138,15 +138,15 @@
                       </el-row>
                     </div>
                     <div>
-                      <el-row gutter="20">
+                      <el-row>
                         <div>
-                          <el-col :span="8" :sm="8" :md="8" :lg="8">
+                          <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
                             <img src="../../assets/Imgs/icono_facebook.png" alt="" class="icoRedes">
                           </el-col>
-                          <el-col :span="8" :sm="8" :md="8" :lg="8">
+                          <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
                             <img src="../../assets/Imgs/icono_twitter.png" alt="" class="icoRedes">
                           </el-col>
-                          <el-col :span="8" :sm="8" :md="8" :lg="8">
+                          <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
                             <img src="../../assets/Imgs/icono_instagram.png" alt="" class="icoRedes">
                           </el-col>
                         </div>
@@ -404,9 +404,7 @@
     }
 
     .icoRedes {
-      width: 3.7em !important;
-      margin: 0 auto;
-      display: block;
+      width: 3.5em !important;
     }
 
     .icoBits {
