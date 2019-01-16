@@ -134,7 +134,7 @@
       </div>
     </el-main>
     <el-footer>
-      <Footer></Footer>
+     <Footer></Footer>
     </el-footer>
     <!--<router-view></router-view>-->
   </el-container>
@@ -234,7 +234,7 @@
     background-attachment: inherit;
     background-position: center center;
     background-size: cover;
-    padding: 10%;
+    padding: 0%;
   }
 
   /*Textos*/
@@ -279,10 +279,11 @@
   } from 'vuelidate/lib/validators'
   import Api from '../services/Api'
   import Icoins from '../components/components/Icoins'
+  import Footer from '../components/components/Footer'
 
-  export default {
+export default {
     name: 'Register',
-    components: {Icoins},
+    components: {Footer, Icoins},
     mixins: [validationMixin],
     data: () => ({
       form: {
