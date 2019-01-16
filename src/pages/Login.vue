@@ -1,6 +1,6 @@
 <template>
   <el-container class="backHeader">
-<Icoins></Icoins>
+    <Icoins></Icoins>
     <el-main>
       <div class="login-wrapper border border-light center">
         <form class="form-signin center" @submit.prevent="login">
@@ -37,7 +37,6 @@
         <!--</div>-->
       </div>
     </el-main>
-
     <el-footer>
       <Footer></Footer>
     </el-footer>
@@ -105,7 +104,7 @@
     background-attachment: inherit;
     background-position: center center;
     background-size: cover;
-    padding: 10%;
+    padding: 0%;
   }
 
   /*Textos*/
@@ -117,6 +116,7 @@
     font-weight: bold;
     padding: 5%;
   }
+
 
 
   /*Botones*/
@@ -138,7 +138,7 @@
   import Footer from '../components/components/Footer'
   import Icoins from '../components/components/Icoins'
 
-export default {
+  export default {
     components: {Icoins, Footer},
     created () {
       this.$store.commit('SET_LAYOUT', 'login-layout')
