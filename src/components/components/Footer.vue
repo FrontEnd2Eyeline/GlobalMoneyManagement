@@ -9,19 +9,19 @@
         </el-row>
         <el-row gutter="20">
           <div class="center">
-            <el-col :xs="24" :sm="24" :md="24" :lg="8">
+            <el-col :xl="8">
               <h1 class="fontSiz">
                 Global Money Management
               </h1>
             </el-col>
-            <el-col :xs="24" :sm="24" :md="24" :lg="8">
+            <el-col :xl="8">
               <div class="center">
                 <p class="fontSizecard2">
                   Puedes abrir tu cuenta con un deposito de 0,1 BTC + 5% para trámites de operación. ¡Así de fácil!
                 </p>
               </div>
             </el-col>
-            <el-col :xs="24" :sm="24" :md="24" :lg="8">
+            <el-col :xl="8">
               <div class="center">
                 <el-button class="btnRegister" size="medium">
                   CREA TU CUENTA
@@ -70,6 +70,9 @@
                 <li class="colorMenu">
                   Responsabilidades
                 </li>
+                <li>
+                  &nbsp;
+                </li>
               </ul>
             </el-col>
             <el-col :md="24" :lg="5">
@@ -92,6 +95,9 @@
                 <li class="colorMenu">
                   Matricula
                 </li>
+                <li>
+                  &nbsp;
+                </li>
               </ul>
             </el-col>
             <el-col :md="24" :lg="5">
@@ -100,10 +106,13 @@
               </h5>
               <ul class="pie">
                 <li>
-                  &nbsp;
+                  &nbsp;&nbsp;
                 </li>
                 <li class="colorMenu">
                   Términos y condiciones
+                </li>
+                <li>
+                  &nbsp;
                 </li>
               </ul>
             </el-col>

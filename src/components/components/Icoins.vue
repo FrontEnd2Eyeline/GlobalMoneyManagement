@@ -3,9 +3,9 @@
     <el-main>
       <div>
         <el-row>
-          <el-col :xm="24" :sm="12" :md="4" :lg="6">
+          <el-col :md="4" :lg="6">
             <div>
-              &nbsp;
+              &nbsp;&nbsp;
             </div>
           </el-col>
           <el-col :xm="24" :sm="12" :md="4" :lg="3">
@@ -68,9 +68,9 @@
               </div>
             </div>
           </el-col>
-          <el-col :xm="24" :sm="12" :md="4" :lg="6">
+          <el-col :md="4" :lg="6">
             <div>
-              &nbsp;
+              &nbsp;&nbsp;
             </div>
           </el-col>
         </el-row>
@@ -88,7 +88,6 @@
     font-size: 2rem;
     color: #FFF;
     text-align: center;
-    font-family: Avenir;
     font-weight: bold;
   }
 
@@ -96,7 +95,6 @@
     font-size: 1.2rem;
     color: #FFF;
     text-align: center;
-    font-family: Avenir;
     padding-bottom: 2%;
   }
 
@@ -112,7 +110,6 @@
     font-size: 1.5em;
     color: #FFF;
     text-align: center;
-    font-family: Avenir;
     font-weight: bold;
   }
 
@@ -120,7 +117,6 @@
     font-size: 0.9em;
     color: #FFF;
     text-align: center;
-    font-family: Avenir;
     padding-bottom: 2%;
     margin-top: -8%;
   }
