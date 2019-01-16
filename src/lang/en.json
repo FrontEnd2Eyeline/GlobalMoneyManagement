@@ -1,4 +1,8 @@
 {
+  "_Key_Validations": "VALIDATIONS",
+
+  "RequiredCampo": "Required field",
+
   "_Key_Login":"LOGIN",
 
   "Login": "Login",
@@ -20,5 +24,7 @@
 
   "_Key_Register":"REGISTER",
 
-  "Register": "Register"
+  "Register": "Register",
+  "SelectPlan": "Select the plan",
+  "SelectCountry": "Select the country"
 }

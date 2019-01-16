@@ -1,6 +1,6 @@
 <template>
   <el-container class="backHeader">
-<Icoins></Icoins>
+    <Icoins></Icoins>
     <el-main>
       <div class="center">
         <form novalidate class="md-layout" @submit.prevent="validateUser">
@@ -8,99 +8,133 @@
             <div>
               <h2 class="fontTitulosW">{{$t('Register')}}</h2>
             </div>
+            <el-row :gutter="10">
+              <el-col :md="12" :lg="12">
+                <div class="grid-content bg-purple-light wid100 marButtonsTexts">
+                  <div for="planId" class="md-layout-item md-small-size-100">
+                    <el-field :class="getValidationClass('planId')">
+                      <el-select class="wid100" slot="prepend" v-bind:placeholder="$t('SelectPlan')" name="planId"
+                                 id="planId"
+                                 v-model="form.planId" md-dense :disabled="sending">
+                        <el-option v-for="pack in packs " v-bind:value="pack.nombre" :key="pack.id">
+                          {{pack.nombre}}
+                        </el-option>
+                      </el-select>
+                    </el-field>
+                    <div>
+                      <span class="md-error" v-if="!$v.form.planId.required">{{$t('RequiredCampo')}}</span>
+                    </div>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :md="12" :lg="12">
+                <div class="grid-content bg-purple-light ">
+                  <div for="paisId" class="md-layout-item md-small-size-100 marButtonsTexts">
+                    <el-field :class="getValidationClass('paisId')">
+                      <el-select class="wid100" slot="prepend" v-bind:placeholder="$t('SelectCountry')" name="paisId"
+                                 id="paisId"
+                                 v-model="form.paisId" md-dense :disabled="sending">
+                        <el-option v-for="country in countries" v-bind:value="country.nombre" :key="countries.id"
+                                   :label="country.name">
+                          {{country.nombre}}
+                        </el-option>
+                      </el-select>
+                    </el-field>
+                    <div>
+                     <span class="md-error"
+                           v-if="!$v.form.paisId.required">El país es requerido</span>
+                    </div>
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
             <el-card-content>
-              <div class="md-layout-item md-small-size-100">
-                <el-field :class="getValidationClass('planId')">
-                  <label for="planId">Plan</label>
-                  <el-select slot="prepend" placeholder="Seleccione el plan" name="planId" id="planId" v-model="form.planId" md-dense :disabled="sending">
-                    <el-option v-for="pack in packs " v-bind:value="pack.nombre" :key="pack.id">
-                      {{pack.nombre}}
-                    </el-option>
-                  </el-select>
-                  <span class="md-error"
-                        v-if="!$v.form.planId.required">Campo requerido</span>
-                </el-field>
-              </div>
               <div class="md-layout md-gutter">
-                <div class="md-layout-item md-small-size-100">
+                <div for="nombre" class="md-layout-item md-small-size-100 marButtonsTexts">
                   <el-field :class="getValidationClass('nombre')">
-                    <label for="nombre">First Name</label>
-                    <el-input name="nombre" id="nombre" autocomplete="given-name"
+                    <el-input placeholder="Nombres" name="nombre" id="nombre" autocomplete="given-name"
                               v-model="form.nombre" :disabled="sending"/>
                     <span class="md-error"
-                          v-if="!$v.form.nombre.required">The first name is required</span>
+                          v-if="!$v.form.nombre.required">El nombre es requerido</span>
                     <span class="md-error"
-                          v-else-if="!$v.form.nombre.minlength">Invalid first name</span>
+                          v-else-if="!$v.form.nombre.minLength">El nombre debe tener mínimo 3 caracteres</span>
+                    <span class="md-error"
+                          v-else-if="!$v.form.nombre.maxLength">El nombre debe tener máximo 45 caracteres</span>
                   </el-field>
                 </div>
               </div>
               <div class="md-layout md-gutter">
-                <div class="md-layout-item md-small-size-100">
+                <div for="apellido" class="md-layout-item md-small-size-100 marButtonsTexts">
                   <el-field :class="getValidationClass('apellido')">
-                    <label for="apellido">Last Name</label>
-                    <el-input name="apellido" id="apellido" autocomplete="given-name"
+                    <el-input placeholder="Apellidos" name="apellido" id="apellido" autocomplete="given-name"
                               v-model="form.apellido" :disabled="sending"/>
                     <span class="md-error"
-                          v-if="!$v.form.apellido.required">The first name is required</span>
+                          v-if="!$v.form.apellido.required">El apellido es requerido</span>
                     <span class="md-error"
-                          v-else-if="!$v.form.apellido.minlength">Invalid first name</span>
+                          v-else-if="!$v.form.apellido.minLength">El apellido debe tener mínimo 4 caracteres</span>
+                    <span class="md-error"
+                          v-else-if="!$v.form.apellido.maxLength">El apellido debe tener máximo 45 caracteres</span>
                   </el-field>
                 </div>
-
               </div>
 
               <div class="md-layout md-gutter">
-                <div class="md-layout-item md-small-size-100">
+                <div for="email" class="md-layout-item md-small-size-100 marButtonsTexts">
+                  <el-field :class="getValidationClass('email')">
+                    <el-input type="email" name="email" id="email" autocomplete="email" v-model="form.email"
+                              :disabled="sending"/>
+                  </el-field>
+                  <div>
+                    <span class="md-error" v-if="!$v.form.email.required">El correo electrónico es obligatorio</span>
+                    <span class="md-error" v-else-if="!$v.form.email.email">Correo electrónico invalido</span>
+                    <span class="md-error" v-else-if="!$v.form.email.minLength">Correo electrónico debe tener mínimo 6 caracteres</span>
+                    <span class="md-error" v-else-if="!$v.form.email.maxLength">Correo electrónico debe tener máximo 40 caracteres</span>
+                  </div>
+                </div>
+              </div>
+              <div class="md-layout md-gutter">
+                <div for="password" class="md-layout-item md-small-size-100 ">
                   <el-field :class="getValidationClass('password')">
-                    <label for="password">Password</label>
-                    <el-input type="password" name="password" id="password" autocomplete="given-name"
+                    <el-input placeholder="Contraseña" type="password" name="password" id="password"
+                              autocomplete="given-name"
                               v-model="form.password" :disabled="sending"/>
                     <span class="md-error"
-                          v-if="!$v.form.password.required">The first name is required</span>
-                    <span class="md-error" v-else-if="!$v.form.password.minlength">Invalid first name</span>
-
+                          v-if="!$v.form.password.required">Contraseña es requerida</span>
+                    <span class="md-error" v-else-if="!$v.form.password.minLength">La contraseña debe tener mínimo 6 caracteres</span>
                   </el-field>
                 </div>
-
-                <div class="md-layout-item md-small-size-100">
-                  <el-field :class="getValidationClass('paisId')">
-                    <label for="paisId">Pais</label>
-                    <el-select name="paisId" id="paisId" v-model="form.paisId" md-dense :disabled="sending">
-                      <el-option></el-option>
-                      <el-option v-for="country in countries" v-bind:value="country.id" :key="countries.id">
-                        {{country.nombre}}
-                      </el-option>
-                    </el-select>
-                    <span class="md-error">The gender is required</span>
-                  </el-field>
-                </div>
-
+              </div>
+            </el-card-content>
+            <!--<el-progress-bar md-mode="indeterminate" v-if="sending"/>-->
+            <el-card-actions>
+              <el-row :gutter="10">
+                <el-col :md="12" :lg="12">
+                  <div>
+                    <p class="fontCrearAccount">
+                      ¿Ya tienes cuenta?
+                    </p>
+                  </div>
+                </el-col>
+                <el-col :md="12" :lg="12">
+                  <div>
+                    <md-button type="submit" class="fontCrearAccount" :disabled="sending">Crear mi cuenta</md-button>
+                  </div>
+                </el-col>
+              </el-row>
+              <div>
+                <h4 class="white">
+                  Haciendo clic en el botón de <b>Crear mi cuenta</b> estás aceptando los <u>términos y condiciones</u>
+                </h4>
               </div>
 
-              <el-field :class="getValidationClass('email')">
-                <label for="email">Email</label>
-                <el-input type="email" name="email" id="email" autocomplete="email" v-model="form.email"
-                          :disabled="sending"/>
-                <span class="md-error" v-if="!$v.form.email.required">The email is required</span>
-                <span class="md-error" v-else-if="!$v.form.email.email">Invalid email</span>
-              </el-field>
-            </el-card-content>
-
-            <el-progress-bar md-mode="indeterminate" v-if="sending"/>
-
-            <el-card-actions>
-              <md-button type="submit" class="md-primary" :disabled="sending">Create user</md-button>
-
             </el-card-actions>
-
           </el-card>
-
-          <el-snackbar :md-active.sync="userSaved">{{ lastUser }}</el-snackbar>
+          <!--<el-snackbar :md-active.sync="userSaved">{{ lastUser }}</el-snackbar>-->
         </form>
       </div>
     </el-main>
     <el-footer>
-    <Footer></Footer>
+      <Footer></Footer>
     </el-footer>
     <!--<router-view></router-view>-->
   </el-container>
@@ -113,6 +147,20 @@
     top: 0;
     right: 0;
     left: 0;
+  }
+
+  span {
+    color: #ffe400;
+  }
+
+  .white{
+    color: white;
+  }
+
+  /*Inputs*/
+
+  .wid100 {
+    width: 100%;
   }
 
   /*Alineación*/
@@ -133,6 +181,10 @@
     margin-bottom: 10px;
   }
 
+  .marButtonsTexts {
+    margin-bottom: 1.2em;
+  }
+
   pre {
     width: 100%;
     color: rgba(255, 255, 255, .8);
@@ -148,6 +200,16 @@
   }
 
   /*Controls*/
+
+  .el-card {
+    border: 0px solid #ebeef5;
+    background-color: transparent;
+    color: #303133;
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, .1);
+  }
 
   vs-input--input {
     text-align: center;
@@ -185,6 +247,14 @@
     padding: 5%;
   }
 
+  .fontCrearAccount {
+    font-size: 1.2em !important;
+    color: #ffffff;
+    line-height: 50px;
+    color: white !important;
+    text-align: center;
+  }
+
 
   /*Botones*/
 
@@ -209,11 +279,10 @@
   } from 'vuelidate/lib/validators'
   import Api from '../services/Api'
   import Icoins from '../components/components/Icoins'
-  import Footer from '../components/components/Footer'
 
-export default {
+  export default {
     name: 'Register',
-    components: {Footer, Icoins},
+    components: {Icoins},
     mixins: [validationMixin],
     data: () => ({
       form: {
@@ -235,16 +304,21 @@ export default {
       form: {
         nombre: {
           required,
-          minLength: minLength(3)
+          minLength: minLength(3),
+          maxLength: maxLength(45)
         },
         apellido: {
-          required
+          required,
+          minLength: minLength(4),
+          maxLength: maxLength(45)
         },
         planId: {
           required
         },
         password: {
-          required
+          required,
+          minLength: minLength(6),
+          maxLength: maxLength(100)
 
         },
         email: {
