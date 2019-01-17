@@ -16,10 +16,17 @@
                       id="inputEmail" class="form-control center textWidht" v-bind:placeholder="$t('Email')"
                       autofocus>
             </el-input>
-            <el-alert active="true" color="danger" class="error" v-if="!$v.email.required">Field is required</el-alert>
-            <el-alert active="true" color="danger" class="error" v-if="!$v.email.minLength">Name must have at least
-              {{$v.email.$params.minLength.min}} letters.
-            </el-alert>
+            <!--<span class="md-error" v-if="!$v.email.required">Contraseña es requerida</span>-->
+            <!--<span class="md-error" v-if="!$v.email.minLength">Contraseña es requerida</span>-->
+
+            <span class="md-error" v-if="!$v.email.required">El correo electrónico es obligatorio</span>
+            <span class="md-error" v-else-if="!$v.email.email">Correo electrónico invalido</span>
+            <span class="md-error" v-else-if="!$v.email.minLength">Correo electrónico debe tener mínimo 6 caracteres</span>
+            <span class="md-error" v-else-if="!$v.email.maxLength">Correo electrónico debe tener máximo 40 caracteres</span>
+            <!--<el-alert active="true" color="danger" class="error" v-if="!$v.email.required">Field is required</el-alert>-->
+            <!--<el-alert active="true" color="danger" class="error" v-if="!$v.email.minLength">Name must have at least-->
+              <!--{{$v.email.$params.minLength.min}} letters.-->
+            <!--</el-alert>-->
           </div>
           <div class="marBut10px">
             <!--<label for="inputPassword" class="sr-only">Password</label>-->
@@ -90,8 +97,6 @@
   }
 
   /*Controls*/
-
-
 
   input {
     text-align: center;
@@ -164,13 +169,12 @@
 
   .bacgroundBtnOpacity {
     background: #0089b3;
-
   }
 </style>
 
 <script>
   import AuthUser from '../services/AuthUser'
-  import {required, minLength} from 'vuelidate/lib/validators'
+  import {required, minLength, email, maxLength} from 'vuelidate/lib/validators'
   import App from '@/App'
   import Footer from '../components/components/Footer'
   import Icoins from '../components/components/Icoins'
@@ -192,7 +196,9 @@
     validations: {
       email: {
         required,
-        minLength: minLength(4)
+        minLength: minLength(4),
+        maxLength: maxLength(40),
+        email
       }
     },
 
