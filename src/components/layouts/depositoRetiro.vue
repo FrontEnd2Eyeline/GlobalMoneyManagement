@@ -1,6 +1,5 @@
 <template>
     <el-container>
-      <header></header>
       <el-main>
         <div>
           <el-row>
@@ -76,7 +75,7 @@
           </el-row>
         </div>
       </el-main>
-      <footer></footer>
+
     </el-container>
 </template>
 
@@ -89,7 +88,7 @@
 <style scoped>
 
   @media only screen and (max-width: 576px){
-    .fontTitLDeposito{
+    .fontTitDeposito{
       font-size: 1.5rem;
       color: #000;
       text-align: left;
