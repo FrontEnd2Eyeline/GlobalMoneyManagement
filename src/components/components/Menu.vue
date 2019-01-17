@@ -17,7 +17,7 @@
               </p>
             </el-col>
             <el-col :lg="2">
-              Espacio vacios
+              &nbsp;
             </el-col>
             <el-col :lg="2">
               <p class="colorMenu">
@@ -94,6 +94,10 @@
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+
+  .espacio{
+    margin: 10%;
   }
 
 </style>
