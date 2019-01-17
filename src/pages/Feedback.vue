@@ -4,57 +4,66 @@
 
     </div>
     <div class="center martitle">
-      <h2 class="fontTitulosW">Tu Negocio</h2>
+      <h2 class="fontTitulosW">Feedback</h2>
     </div>
     <Icoins class="marPage"></Icoins>
     <el-main class="backWhite ">
-      <div class="login-wrapper border border-light center backNegocio">
-        <div class="padtitles">
-          <h2 class="fontTitMain">Comienza a ganar comisiones con criptomonedas</h2>
-          <p class="fontSizeTextFoo padtexttitles">Refiere a tus amigos utilizando el voz a voz, redes sociales, videos,
-            entre
-            otras herramientas. Recibe comisiones de acuerdo al plan adquirido por tu referido y aumenta tus
-            ganancias de manera exponencial.</p>
-        </div>
+      <div class="login-wrapper border border-light center">
+
         <el-row :gutter="10">
           <el-col :span="4">
             <div class="">
               &nbsp;
             </div>
           </el-col>
-          <el-col :span="8">
-            <div class="marTexts">
-              <h3 class="fontTitComisiones">
-                Sistema de comisiones
-              </h3>
-              <p class="fontSizeTextComi">
-                Nota 1: todo patrocinador debe tener un paquete activo al momento de referir un usuario a nuestra
-                plataforma y todo está estructurado de acuerdo al plan de negocios donde este el patrocinador en plan
-                amigos la comisión de ganancia funciona con seis referidos o más de su mismo plan donde su comisión será
-                remunerada por un aumento en las ganancias de su paquete activo, se incrementará de un 10% al 15%
-                mensual si uno de sus referidos se retira su plan volverá a la ganancia inicial del 10% de su cuenta
-                activa.<br><br>
-
-                Nota 2: Si un referido compra un paquete GMM PREMIUM el patrocinador recibirá un bono directo a su
-                cuenta del 5% y una ganancia directa en su paquete activo del 12% sobre su balance activo.
-              </p>
+          <el-col class="backMain" :span="8">
+            <div>
+              <div>
+                <h2 class="fontTitMain">Para nosotros es importante saber que piensas</h2>
+              </div>
+              <el-row class="marTexts">
+                <el-col :md="24" :lg="24">
+                  <div class="righTMaIco pad15Right">
+                    <p class="fontSizeTextFoo">
+                      Utilice el siguiente formulario para enviarnos sus comentarios. Leemos todos los comentarios
+                      cuidadosamente, pero no podemos responder a cada presentación individualmente. Si proporciona su
+                      dirección de correo electrónico, acepta que podamos comunicarnos con usted para comprender mejor
+                      los comentarios que envió.
+                    </p>
+                  </div>
+                </el-col>
+              </el-row>
             </div>
           </el-col>
-
-          <el-col  :span="8">
-            <div class="padTexts mrg54">
-              <div class="marTexts">
-                <p class="fontSizeTextComi">
-                  Nota 3: Si un referido compra un paquete GMM PLATINIUM el patrocinador recibirá un bono directo a su
-                  cuenta del 7% y una ganancia directa en su paquete activo del 15% sobre su balance activo. <br><br>
-                  Nota 4: todos los referidos del plan Negocios que incluye planes PREMIUM Y PLATINIUM, su duración debe
-                  ser de un año o su cuenta será castigada con una penalidad directa del 12% de su saldo en el activo
-                  menos el 5% al momento del retiro.
-                </p>
-              </div>
+          <el-col class="degrade" :span="8">
+            <div class="padTexts">
               <div>
                 <img class="widthIcos" src="../assets/Icons/YourBusiness/icoBusiness.png">
               </div>
+              <div class="marTexts">
+                <div class="marBut10px">
+                  <el-input placeholder="Tu nombre">
+                  </el-input>
+                </div>
+                <div class="marBut10px">
+                  <el-input placeholder="Tu correo electrónico">
+                  </el-input>
+                </div>
+                <div class="textareamax">
+                  <el-input
+                    type="textarea"
+                    :autosize="{ minRows: 4, maxRows: 4}"
+                    placeholder="Tu mensaje"
+                    maxlength="250"
+                    v-model="textarea">
+                  </el-input>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h2 class="textRightWhi">
+                Enviar
+              </h2>
             </div>
           </el-col>
           <el-col :span="4">
@@ -73,14 +82,15 @@
 </template>
 
 <script>
-  import Footer from '../components/components/Footer'
   import Icoins from '../components/components/Icoins'
+  import Footer from '../components/components/Footer'
 
   export default {
-    name: 'YourBusiness',
-    components: {Icoins, Footer}
+    name: 'Feedback',
+    components: {Footer, Icoins}
   }
 </script>
+
 <style lang="scss" scoped>
 
   .el-textarea__inner {
@@ -138,13 +148,13 @@
     padding: 0%;
   }
 
-  .backNegocio {
-    background-image: url('../assets/Imgs/YourBusiness/Tu_Negocio.jpg');
+  .backMain {
+    background-image: url('../assets/Imgs/Contact/backWhiteContact.png');
     background-repeat: no-repeat;
-    /* background-attachment: inherit; */
-    background-position: center;
-    background-size: auto;
-    padding: 0%;
+    background-attachment: inherit;
+    background-position: center center;
+    background-size: cover;
+    padding: 2.4%;
   }
 
   .degrade {
@@ -181,13 +191,6 @@
   .fontSizeTextFoo {
     font-size: 1.2em !important;
     color: black !important;
-    text-align: right;
-    padding-top: 2%;
-  }
-
-  .fontSizeTextComi {
-    font-size: 1.2em !important;
-    color: black !important;
     text-align: left;
     padding-top: 2%;
   }
@@ -197,27 +200,17 @@
     color: #FFF;
     text-align: left;
     font-weight: bold;
-    padding-top: 5%;
+    padding: 5%;
   }
 
   .fontTitMain {
-    font-size: 2.4em;
-    color: black;
-    text-align: right;
-    font-weight: bold;
-    padding-top: 6%;
-    line-height: 40px;
-  }
-
-  .fontTitComisiones {
-    font-size: 2.4em;
+    font-size: 3.4em;
     color: black;
     text-align: left;
     font-weight: bold;
     padding-top: 6%;
     line-height: 40px;
   }
-
 
   .fontInfo {
     font-size: 1.1em;
@@ -245,10 +238,6 @@
 
   /*Márgenes*/
 
-  .mrg54{
-    margin-top: 5.4%;
-  }
-
   .marPage {
     margin-bottom: 5em;
   }
@@ -271,13 +260,8 @@
 
   /*Paddings*/
 
-  .padtitles {
-    padding-right: 20%;
-    padding-left: 22%;
-  }
-
-  .padtexttitles {
-    padding-left: 50%;
+  .pad15Right{
+    padding-right: 16%;
   }
 
   .padTexts {

@@ -16,8 +16,8 @@
               &nbsp;
             </div>
           </el-col>
-          <el-col :span="8">
-            <div class="">
+          <el-col class="backMain" :span="8">
+            <div>
               <div>
                 <h2 class="fontTitMain">Para nosotros es un placer atenderte</h2>
               </div>
@@ -207,12 +207,12 @@
   }
 
   .backMain {
-    background-image: url('../assets/Icons/Contact/backContact.jpg');
+    background-image: url('../assets/Imgs/Contact/backWhiteContact.png');
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center center;
     background-size: cover;
-    padding: 0%;
+    padding: 2.4%;
   }
 
   .degrade {
