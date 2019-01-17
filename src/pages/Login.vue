@@ -1,5 +1,6 @@
 <template>
   <el-container class="backHeader">
+    <Menu></Menu>
     <Icoins></Icoins>
     <el-main>
       <div class="login-wrapper border border-light center">
@@ -177,10 +178,12 @@
   import {required, minLength, email, maxLength} from 'vuelidate/lib/validators'
   import App from '@/App'
   import Footer from '../components/components/Footer'
+  import Menu from "../components/components/Menu"
   import Icoins from '../components/components/Icoins'
 
+
   export default {
-    components: {Icoins, Footer},
+    components: {Menu, Icoins, Footer},
     created () {
       this.$store.commit('SET_LAYOUT', 'login-layout')
     },
