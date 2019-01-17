@@ -84,19 +84,19 @@
 
   /*Texto*/
 
-  .fontTitValorBitcoin {
-    font-size: 2rem;
-    color: #FFF;
-    text-align: center;
-    font-weight: bold;
-  }
+  /*.fontTitValorBitcoin {*/
+    /*font-size: 2rem;*/
+    /*color: #FFF;*/
+    /*text-align: center;*/
+    /*font-weight: bold;*/
+  /*}*/
 
-  .fontValorBitcoin {
-    font-size: 1.2rem;
-    color: #FFF;
-    text-align: center;
-    padding-bottom: 2%;
-  }
+  /*.fontValorBitcoin {*/
+    /*font-size: 1.2rem;*/
+    /*color: #FFF;*/
+    /*text-align: center;*/
+    /*padding-bottom: 2%;*/
+  /*}*/
 
   .fontTitulosW {
     font-size: 3.4em;
@@ -111,6 +111,7 @@
     color: #FFF;
     text-align: center;
     font-weight: bold;
+    padding: 5%;
   }
 
   .fontValorBitcoin {
@@ -172,8 +173,22 @@
 
   /*ImgIcons*/
 
-  .widthIcos {
-    width: 80%;
+  @media only screen and (max-width: 767px){
+    .widthIcos {
+      width: 40%;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 992px){
+    .widthIcos {
+      width: 60%;
+    }
+  }
+
+  @media only screen and (min-width: 993px){
+    .widthIcos {
+      width: 80%;
+    }
   }
 
   .widthIcosFlip {
