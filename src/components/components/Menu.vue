@@ -45,39 +45,39 @@
               <!--ESPAÑOL-->
             <!--</el-col>-->
           </el-row>
-          <el-row>
-            <el-col :span="4">
-              <img src="../../assets/Imgs/logo_GMM.png" class="logoGMM">
-            </el-col>
-            <el-col :span="20">
-              <el-tabs v-model="Menu" @tab-click="handleClick">
-                <el-tab-pane label="LOGIN" name="first">
-                  LOGIN
-                </el-tab-pane>
-                <el-tab-pane label="SIGN UP" name="second">
-                  SIGN UP
-                </el-tab-pane>
-                <el-tab-pane label="INICIO" name="third">
-                  INICIO
-                </el-tab-pane>
-                <el-tab-pane label="LEGALES" name="fourth">
-                  LEGALES
-                </el-tab-pane>
-                <el-tab-pane label="NOTICIAS" name="fifth">
-                  NOTICIAS
-                </el-tab-pane>
-                <el-tab-pane label="FEEDBACK" name="sixth">
-                  FEEDBACK
-                </el-tab-pane>
-                <el-tab-pane label="CONTACTO" name="seventh">
-                  CONTACTO
-                </el-tab-pane>
-                <el-tab-pane label="ESPAÑOL" name="eight">
-                  ESPAÑOL
-                </el-tab-pane>
-              </el-tabs>
-            </el-col>
-          </el-row>
+          <!--<el-row>-->
+            <!--<el-col :span="4">-->
+              <!--<img src="../../assets/Imgs/logo_GMM.png" class="logoGMM">-->
+            <!--</el-col>-->
+            <!--<el-col :span="20">-->
+              <!--<el-tabs v-model="Menu" @tab-click="handleClick">-->
+                <!--<el-tab-pane label="LOGIN" name="first">-->
+                  <!--LOGIN-->
+                <!--</el-tab-pane>-->
+                <!--<el-tab-pane label="SIGN UP" name="second">-->
+                  <!--SIGN UP-->
+                <!--</el-tab-pane>-->
+                <!--<el-tab-pane label="INICIO" name="third">-->
+                  <!--INICIO-->
+                <!--</el-tab-pane>-->
+                <!--<el-tab-pane label="LEGALES" name="fourth">-->
+                  <!--LEGALES-->
+                <!--</el-tab-pane>-->
+                <!--<el-tab-pane label="NOTICIAS" name="fifth">-->
+                  <!--NOTICIAS-->
+                <!--</el-tab-pane>-->
+                <!--<el-tab-pane label="FEEDBACK" name="sixth">-->
+                  <!--FEEDBACK-->
+                <!--</el-tab-pane>-->
+                <!--<el-tab-pane label="CONTACTO" name="seventh">-->
+                  <!--CONTACTO-->
+                <!--</el-tab-pane>-->
+                <!--<el-tab-pane label="ESPAÑOL" name="eight">-->
+                  <!--ESPAÑOL-->
+                <!--</el-tab-pane>-->
+              <!--</el-tabs>-->
+            <!--</el-col>-->
+          <!--</el-row>-->
         </div>
       </el-main>
       <el-main>
@@ -89,7 +89,7 @@
 
 <script>
     export default {
-        name: "Menu"
+      name: 'Menu'
     }
     // export default {
     //   data() {
@@ -112,7 +112,7 @@
       width: 2.5em;
     }
     .colorMenu{
-      color: #000 !important;
+      color: white !important;
       text-align: left;
     }
   }
@@ -124,7 +124,7 @@
       display: block;
     }
     .colorMenu{
-      color: #000 !important;
+      color: white !important;
       text-align: center;
     }
   }
