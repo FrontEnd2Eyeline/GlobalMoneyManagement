@@ -1,79 +1,47 @@
 <template>
   <el-container class="backHeader">
     <div class="martitle">
-
     </div>
     <div class="center martitle">
-      <h2 class="fontTitulosW">Feedback</h2>
+      <h2 class="fontTitulosW">Matrícula</h2>
     </div>
     <Icoins class="marPage"></Icoins>
-    <el-main class="backWhite ">
-      <div class="login-wrapper border border-light center">
+    <el-main class=" backMatricula">
+      <el-row :gutter="10">
+        <el-col :span="4">
+          <div>
+            &nbsp;
+          </div>
+        </el-col>
+        <el-col :span="16">
+          <div>
+            <div>
+              <h2 class="fontTitMain">Tasas de honorarios de GMMCLUB</h2>
+              <p class="fontSizeTextFoo">
+                Tarifas transacciones
+              </p>
+              <p class="fontSizeTextFoo">
+                Recargo de moneda dígital / tasa de retirada
+              </p>
+              <p class="fontSizeTextFoo">
+                Depósito 5%
+              </p>
+              <p class="fontSizeTextFoo">
+                Retiro 5%
+              </p>
+            </div>
+          </div>
+        </el-col>
+        <el-col :span="4">
+          <div>
+            &nbsp;
+          </div>
+        </el-col>
+      </el-row>
+      <div class="login-wrapper border border-light center marTexts">
 
-        <el-row :gutter="10">
-          <el-col :span="4">
-            <div class="">
-              &nbsp;
-            </div>
-          </el-col>
-          <el-col class="backMain" :span="8">
-            <div>
-              <div>
-                <h2 class="fontTitMain">Para nosotros es importante saber que piensas</h2>
-              </div>
-              <el-row class="marTexts">
-                <el-col :md="24" :lg="24">
-                  <div class="righTMaIco pad15Right">
-                    <p class="fontSizeTextFoo">
-                      Utilice el siguiente formulario para enviarnos sus comentarios. Leemos todos los comentarios
-                      cuidadosamente, pero no podemos responder a cada presentación individualmente. Si proporciona su
-                      dirección de correo electrónico, acepta que podamos comunicarnos con usted para comprender mejor
-                      los comentarios que envió.
-                    </p>
-                  </div>
-                </el-col>
-              </el-row>
-            </div>
-          </el-col>
-          <el-col class="degrade" :span="8">
-            <div class="padTexts">
-              <div>
-                <img class="widthIcos" src="../assets/Icons/YourBusiness/icoBusiness.png">
-              </div>
-              <div class="marTexts">
-                <div class="marBut10px">
-                  <el-input placeholder="Tu nombre">
-                  </el-input>
-                </div>
-                <div class="marBut10px">
-                  <el-input placeholder="Tu correo electrónico">
-                  </el-input>
-                </div>
-                <div class="textareamax">
-                  <el-input
-                    type="textarea"
-                    :autosize="{ minRows: 4, maxRows: 4}"
-                    placeholder="Tu mensaje"
-                    maxlength="250"
-                    v-model="textarea">
-                  </el-input>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h2 class="textRightWhi">
-                Enviar
-              </h2>
-            </div>
-          </el-col>
-          <el-col :span="4">
-            <div class="grid-content bg-purple">
-              &nbsp;
-            </div>
-          </el-col>
-        </el-row>
+
       </div>
-
     </el-main>
     <el-footer>
       <Footer></Footer>
@@ -81,15 +49,6 @@
   </el-container>
 </template>
 
-<script>
-  import Icoins from '../components/components/Icoins'
-  import Footer from '../components/components/Footer'
-
-  export default {
-    name: 'Feedback',
-    components: {Footer, Icoins}
-  }
-</script>
 
 <style lang="scss" scoped>
 
@@ -148,8 +107,8 @@
     padding: 0%;
   }
 
-  .backMain {
-    background-image: url('../assets/Imgs/Contact/backWhiteContact.png');
+  .backMatricula {
+    background-image: url('../assets/Imgs/Matricula/bcMatricula.jpg');
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center center;
@@ -191,7 +150,7 @@
   .fontSizeTextFoo {
     font-size: 1.2em !important;
     color: black !important;
-    text-align: left;
+    text-align: center;
     line-height: 30px;
     padding-top: 2%;
   }
@@ -207,7 +166,7 @@
   .fontTitMain {
     font-size: 3.4em;
     color: black;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     padding-top: 6%;
     line-height: 40px;
@@ -261,7 +220,7 @@
 
   /*Paddings*/
 
-  .pad15Right{
+  .pad15Right {
     padding-right: 16%;
   }
 
@@ -282,3 +241,13 @@
   }
 
 </style>
+
+<script>
+  import Icoins from '../components/components/Icoins'
+  import Footer from '../components/components/Footer'
+
+  export default {
+    name: 'Enrollment',
+    components: {Footer, Icoins}
+  }
+</script>
