@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="07d22ef1-0832-46b9-8efa-64154f1b020b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/KYC.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/depositoRetiro.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/components/Menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/components/Menu.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/KYC.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layouts/depositoRetiro.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layouts/depositoRetiro.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/responsabilidades.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,11 +45,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/KYC.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2070">
+            <state relative-caret-position="1609">
               <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pages/responsabilidades.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="412">
+              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+              <folding>
+                <element signature="e#83#89#0" expanded="true" />
+                <element signature="e#182#188#0" expanded="true" />
+                <element signature="e#250#256#0" expanded="true" />
+                <element signature="e#177#183#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,6 +105,7 @@
         <option value="$PROJECT_DIR$/src/pages/depositoRetiro.vue" />
         <option value="$PROJECT_DIR$/src/components/components/Menu.vue" />
         <option value="$PROJECT_DIR$/src/pages/KYC.vue" />
+        <option value="$PROJECT_DIR$/src/pages/responsabilidades.vue" />
       </list>
     </option>
   </component>
@@ -194,7 +204,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4901000" />
+    <option name="totallyTimeSpent" value="5410000" />
   </component>
   <component name="TodoView" selected-index="2" />
   <component name="ToolWindowManager">
@@ -350,8 +360,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/KYC.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
+        <state relative-caret-position="1609">
           <caret line="90" column="31" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/responsabilidades.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+          <folding>
+            <element signature="e#83#89#0" expanded="true" />
+            <element signature="e#182#188#0" expanded="true" />
+            <element signature="e#250#256#0" expanded="true" />
+            <element signature="e#177#183#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
