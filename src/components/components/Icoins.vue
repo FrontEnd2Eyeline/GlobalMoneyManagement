@@ -33,7 +33,7 @@
                 </h3>
                 <br>
                 <h4 class="fontValorBitcoin">
-                  MONEIRO
+                  MONERO
                 </h4>
               </div>
             </div>
