@@ -1,118 +1,110 @@
 <template>
-    <el-container>
+    <el-container class="backMenu">
       <el-main>
         <div>
-          <el-row gutter="20">
-            <el-col :lg="3">
-              <img src="../../assets/Imgs/logo_GMM.png" class="logoGMM">
+          <el-row>
+            <el-col class="espacio" :lg="2">
+              &nbsp;
             </el-col>
-            <el-col :lg="3">
-              <p class="colorMenu">
-                LOGIN
-              </p>
+            <el-col :lg="2">
+              <img src="../../assets/Imgs/logo_GMM.png" class="logoGMM hidden-md-and-down">
             </el-col>
-            <el-col :lg="3">
-              <p class="colorMenu">
-                SIGN UP
-              </p>
+            <el-col :span="2">
+              <div>
+                <p class="colorMenu">
+                  LOGIN
+                </p>
+              </div>
             </el-col>
-            <el-col :lg="3">
-              <p class="colorMenu">
-                INICIO
-              </p>
+            <el-col :lg="2">
+              <div>
+                <p class="colorMenu">
+                  SIGNUP
+                </p>
+              </div>
             </el-col>
-            <el-col :lg="3">
-              <p class="colorMenu">
-                LEGALES
-              </p>
+            <el-col class="espacio" :lg="2">
+              <div>
+                &nbsp;
+              </div>
             </el-col>
-            <el-col :lg="3">
-              <p class="colorMenu">
-                NOTICIAS
-              </p>
+            <el-col :lg="2">
+              <div>
+                <p class="colorMenu">
+                  INICIO
+                </p>
+              </div>
             </el-col>
-            <el-col :lg="3">
+            <el-col :lg="2">
+              <div>
+                <p class="colorMenu">
+                  LEGALES
+                </p>
+              </div>
+            </el-col>
+            <el-col :lg="2">
+              <div>
+                <p class="colorMenu">
+                  NOTICIAS
+                </p>
+              </div>
+            </el-col>
+            <el-col :lg="2">
               <p class="colorMenu">
                 FEEDBACK
               </p>
             </el-col>
-            <el-col :lg="3">
+            <el-col :lg="2">
               <p class="colorMenu">
                 CONTACTO
               </p>
             </el-col>
-            <!--<el-col :lg="3">-->
-              <!--ESPAÑOL-->
-            <!--</el-col>-->
-          </el-row>
-          <el-row>
-            <el-col :span="4">
-              <img src="../../assets/Imgs/logo_GMM.png" class="logoGMM">
-            </el-col>
-            <el-col :span="20">
-              <el-tabs v-model="Menu" @tab-click="handleClick">
-                <el-tab-pane label="LOGIN" name="first">
-                  LOGIN
-                </el-tab-pane>
-                <el-tab-pane label="SIGN UP" name="second">
-                  SIGN UP
-                </el-tab-pane>
-                <el-tab-pane label="INICIO" name="third">
-                  INICIO
-                </el-tab-pane>
-                <el-tab-pane label="LEGALES" name="fourth">
-                  LEGALES
-                </el-tab-pane>
-                <el-tab-pane label="NOTICIAS" name="fifth">
-                  NOTICIAS
-                </el-tab-pane>
-                <el-tab-pane label="FEEDBACK" name="sixth">
-                  FEEDBACK
-                </el-tab-pane>
-                <el-tab-pane label="CONTACTO" name="seventh">
-                  CONTACTO
-                </el-tab-pane>
-                <el-tab-pane label="ESPAÑOL" name="eight">
+            <el-col :lg="2">
+              <div>
+                <p class="colorMenu">
                   ESPAÑOL
-                </el-tab-pane>
-              </el-tabs>
+                </p>
+              </div>
+            </el-col>
+            <el-col :lg="2" class="espacio">
+              <div>
+                &nbsp;
+              </div>
             </el-col>
           </el-row>
         </div>
-      </el-main>
-      <el-main>
-
-
       </el-main>
     </el-container>
 </template>
 
 <script>
     export default {
-        name: "Menu"
+      name: 'Menu'
     }
-    // export default {
-    //   data() {
-    //     return {
-    //       activeName: 'first'
-    //     };
-    //   },
-    //   methods: {
-    //     handleClick(tab, event) {
-    //       console.log(tab, event);
-    //     }
-    //   }
-    // };
 </script>
 
 <style scoped>
 
+  /*Background*/
+
+  .backMenu{
+    background: rgba(0,0,0,0.62);
+    background: -moz-linear-gradient(left, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.62) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,0,0,0.62)), color-stop(100%, rgba(0,0,0,0.62)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.62) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.62) 100%);
+    background: -ms-linear-gradient(left, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.62) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.62) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=1 );
+  }
+
   @media only screen and (max-width: 1200px){
     .logoGMM{
-      width: 2.5em;
+      width: 3.8em;
+      margin-left: -90%;
     }
     .colorMenu{
-      color: #000 !important;
+      color: white !important;
       text-align: left;
     }
   }
@@ -124,9 +116,13 @@
       display: block;
     }
     .colorMenu{
-      color: #000 !important;
+      color: white !important;
       text-align: center;
     }
+  }
+
+  .espacio{
+    visibility: hidden;
   }
 
 </style>

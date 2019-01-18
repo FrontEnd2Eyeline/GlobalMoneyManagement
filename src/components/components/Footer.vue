@@ -45,131 +45,139 @@
       </el-row>
       <el-row :gutter="20">
         <div>
-          <el-col :lg="2">
+          <el-col :sm="2" :md="2" :lg="2">
             &nbsp;
           </el-col>
-          <el-col :md="24" :lg="5">
-            <h5 class="fontTitFooter">
-              GMM CLUB
-            </h5>
-            <ul class="pie">
-              <li>
-                &nbsp;
-              </li>
-              <li class="colorMenu">
-                Sobre Nosotros
-              </li>
-              <li class="colorMenu">
-                Divulgación
-              </li>
-              <li class="colorMenu">
-                Política
-              </li>
-              <li class="colorMenu">
-                Cumplimiento de la ley
-              </li>
-              <li class="colorMenu">
-                Responsabilidades
-              </li>
-              <li>
-                &nbsp;
-              </li>
-            </ul>
+          <el-col :xs="24" :sm="5" :md="5" :lg="5">
+            <div>
+              <h5 class="fontTitFooter">
+                GMM CLUB
+              </h5>
+              <ul class="pie">
+                <li>
+                  &nbsp;
+                </li>
+                <li class="colorMenu">
+                  Sobre Nosotros
+                </li>
+                <li class="colorMenu">
+                  Divulgación
+                </li>
+                <li class="colorMenu">
+                  Política
+                </li>
+                <li class="colorMenu">
+                  Cumplimiento de la ley
+                </li>
+                <li class="colorMenu">
+                  Responsabilidades
+                </li>
+                <li>
+                  &nbsp;
+                </li>
+              </ul>
+            </div>
           </el-col>
-          <el-col :md="24" :lg="5">
-            <h5 class="fontTitFooter">
-              AYUDAS
-            </h5>
-            <ul class="pie">
-              <li>
-                &nbsp;
-              </li>
-              <li class="colorMenu">
-                Feedback
-              </li>
-              <li class="colorMenu">
-                Contacto
-              </li>
-              <li class="colorMenu">
-                Noticias
-              </li>
-              <li class="colorMenu">
-                Matricula
-              </li>
-              <li>
-                &nbsp;
-              </li>
-            </ul>
+          <el-col :xs="24" :sm="5" :md="5" :lg="5">
+            <div>
+              <h5 class="fontTitFooter">
+                AYUDAS
+              </h5>
+              <ul class="pie">
+                <li>
+                  &nbsp;
+                </li>
+                <li class="colorMenu">
+                  Feedback
+                </li>
+                <li class="colorMenu">
+                  Contacto
+                </li>
+                <li class="colorMenu">
+                  Noticias
+                </li>
+                <li class="colorMenu">
+                  Matricula
+                </li>
+                <li>
+                  &nbsp;
+                </li>
+              </ul>
+            </div>
           </el-col>
-          <el-col :md="24" :lg="5">
-            <h5 class="fontTitFooter">
-              LEGALES
-            </h5>
-            <ul class="pie">
-              <li>
-                &nbsp;&nbsp;
-              </li>
-              <li class="colorMenu">
-                Términos y condiciones
-              </li>
-              <li>
-                &nbsp;
-              </li>
-            </ul>
+          <el-col :xs="24" :sm="5" :md="5" :lg="5">
+            <div>
+              <h5 class="fontTitFooter">
+                LEGALES
+              </h5>
+              <ul class="pie">
+                <li>
+                  &nbsp;&nbsp;
+                </li>
+                <li class="colorMenu">
+                  Términos y condiciones
+                </li>
+                <li>
+                  &nbsp;
+                </li>
+              </ul>
+            </div>
           </el-col>
-          <el-col :md="24" :lg="5">
-            <h5>
-              &nbsp;
-            </h5>
-            <ul class="pie">
-              <li>
-                <img src="../../assets/Imgs/LogoText.png" class="icoGmmText" alt="">
-              </li>
-              <li>
-                <div>
-                  <el-container>
-                    <div>
+          <el-col :xs="24" :sm="5" :md="5" :lg="5">
+            <div>
+              <h5>
+                &nbsp;
+              </h5>
+              <ul class="pie">
+                <li>
+                  <img src="../../assets/Imgs/LogoText.png" class="icoGmmText" alt="">
+                </li>
+                <li>
+                  <div>
+                    <el-container class="center">
+                      <div>
                         <el-row>
-                        <div>
-                          <el-col :span="24">
-                            &nbsp;
-                          </el-col>
-                        </div>
-                      </el-row>
-                    </div>
-                    <div>
-                      <el-row>
-                        <div class="center2">
-                          <el-col :xs="8" :sm="4" :md="4" :lg="8">
-                            <img src="../../assets/Imgs/icono_facebook.png" alt="" class="icoRedes">
-                          </el-col>
-                          <el-col :xs="8" :sm="4" :md="4" :lg="8">
-                            <img src="../../assets/Imgs/icono_twitter.png" alt="" class="icoRedes">
-                          </el-col>
-                          <el-col :xs="8" :sm="4" :md="4" :lg="8">
-                            <img src="../../assets/Imgs/icono_instagram.png" alt="" class="icoRedes">
-                          </el-col>
-                        </div>
-                      </el-row>
-                    </div>
-                    <div>
-                      <el-row>
-                        <div>
-                          <el-col :span="24">
-                            &nbsp;
-                          </el-col>
-                        </div>
-                      </el-row>
-                    </div>
-                  </el-container>
-                </div>
-              </li>
-              <li>
-                <img src="../../assets/Imgs/Look.png" alt="" class="icoBits">
-              </li>
-            </ul>
+                          <div>
+                            <el-col :span="24">
+                              &nbsp;
+                            </el-col>
+                          </div>
+                        </el-row>
+                      </div>
+                      <div>
+                        <el-row>
+                          <div>
+                            <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
+                              <img src="../../assets/Imgs/icono_facebook.png" alt="" class="icoRedes">
+                            </el-col>
+                            <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
+                              <img src="../../assets/Imgs/icono_twitter.png" alt="" class="icoRedes">
+                            </el-col>
+                            <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
+                              <img src="../../assets/Imgs/icono_instagram.png" alt="" class="icoRedes">
+                            </el-col>
+                          </div>
+                        </el-row>
+                      </div>
+                      <div>
+                        <el-row>
+                          <div>
+                            <el-col :span="24">
+                              &nbsp;
+                            </el-col>
+                          </div>
+                        </el-row>
+                      </div>
+                    </el-container>
+                  </div>
+                </li>
+                <li>
+                  <img src="../../assets/Imgs/Look.png" alt="" class="icoBits">
+                </li>
+              </ul>
+            </div>
           </el-col>
-          <el-col :lg="2">
+          <el-col  :sm="2" :md="2" :lg="2">
             &nbsp;
           </el-col>
         </div>
@@ -236,6 +244,7 @@
 
   .center2 {
     display: flex !important;
+    align-items: center !important;
     justify-content: center !important;
   }
 
@@ -260,14 +269,13 @@
 
   /*textos*/
 
-  @media only screen and (max-width: 576px) {
+  @media only screen and (max-width: 767px) {
 
     .fontTitFooter {
       font-size: 1.3rem;
       color: #FFF;
-      text-align: left;
+      text-align: center;
       font-weight: bold;
-      padding-left: 5%;
     }
 
     .fontSiz {
@@ -290,9 +298,13 @@
       text-align: center !important;
     }
 
+    ul > li{
+      text-align: center;
+    }
+
   }
 
-  @media only screen and (min-width: 577px) and (max-width: 992px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
 
     .fontTitFooter {
       font-size: 1.3rem;
@@ -404,9 +416,7 @@
     }
 
     .icoRedes {
-      width: 3.7em !important;
-      margin: 0 auto;
-      display: block;
+      width: 3.5em !important;
     }
 
     .icoBits {
