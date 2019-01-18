@@ -125,9 +125,6 @@
           </el-col>
           <el-col :xs="24" :sm="5" :md="5" :lg="5">
             <div>
-              <h5>
-                &nbsp;
-              </h5>
               <ul class="pie">
                 <li>
                   <img src="../../assets/Imgs/LogoText.png" class="icoGmmText" alt="">
@@ -301,7 +298,6 @@
     ul > li{
       text-align: center;
     }
-
   }
 
   @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -346,10 +342,10 @@
 
     .fontSiz {
       color: black !important;
-      font-size: 3.5em;
+      font-size: 3.2em;
       line-height: 50px;
       text-align: center;
-      padding: 5%;
+      padding: 3%;
     }
 
     .fontSizecard2 {

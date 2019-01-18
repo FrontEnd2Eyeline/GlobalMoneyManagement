@@ -29,7 +29,7 @@ export default [
         component: load('Register')
       },
       {
-        path: '',
+        path: 'contact',
         name: 'contact',
         component: load('Contact')
       },
@@ -47,6 +47,31 @@ export default [
         path: 'enrollment',
         name: 'enrollment',
         component: load('Enrollment')
+      },
+      {
+        path: 'deposit',
+        name: 'deposit',
+        component: load('Deposit')
+      },
+      {
+        path: '',
+        name: 'kyc',
+        component: load('Kyc')
+      },
+      {
+        path: 'nosotros',
+        name: 'nosotros',
+        component: load('WeAre')
+      },
+      {
+        path: 'responsabilidades',
+        name: 'responsabilidades',
+        component: load('Responsabilities')
+      },
+      {
+        path: 'userpanel',
+        name: 'userpanel',
+        component: load('UserPanel')
       },
       {
         path: 'cpanel',

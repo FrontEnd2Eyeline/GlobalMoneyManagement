@@ -2,10 +2,16 @@
   <el-container>
     <el-container>
       <div>
-        <span> Hola</span>
-        <div style="text-align: right; font-size: 12px">
-          <el-button @click="logout">LogOut</el-button>
-        </div>
+
+
+        <el-row>
+          <el-col :span="24">
+            <div>
+              <HeaderPanel1></HeaderPanel1>
+            </div>
+          </el-col>
+        </el-row>
+
       </div>
       <el-header>
         <HeaderPanel2></HeaderPanel2>
@@ -46,7 +52,7 @@
         <!--<el-col style="text-align: right; font-size: 12px" :span="1.1">-->
           <!--<div class="grid-content bg-purple">CONFIGURACIÓN</div>-->
         <!--</el-col>-->
-      <!--</el-row>-->
+      </el-row>
       </el-header>
       <el-main :gutter="20">
         <el-row>
@@ -105,7 +111,7 @@
               </el-card>
             </div>
           </el-col>
-          <el-col :span="6">
+          <el-col :span="8">
             <div class="grid-content bg-purple">
               <el-card class="box-card">
                 <div slot="header" class="clearfix">
@@ -138,9 +144,10 @@
 <script>
   import Api from '@/services/Api'
   import HeaderPanel2 from "../components/components/HeaderPanel2";
+  import HeaderPanel1 from "../components/components/HeaderPanel1";
 
   export default {
-    components: {HeaderPanel2},
+    components: {HeaderPanel1, HeaderPanel2},
     data () {
       return {
         user: '',

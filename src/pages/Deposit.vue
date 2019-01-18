@@ -1,7 +1,6 @@
 <template>
-  <el-container>
-    <div class="martitle">
-    </div>
+  <el-container class="backHeader">
+    <Menu></Menu>
     <div class="center martitle">
       <h2 class="fontTitulosW">
         Deposito & Reitro
@@ -22,23 +21,22 @@
               <h2 class="fontTitDeposito">
                 1. Proporcione información correcta y precisa
               </h2>
-              <br>
-              <ul>
+              <ul class="fontDeposito1">
                 <li>
-                  <p class="fontDeposito1">
+                  <p>
                     Verifiación KYC:
                   </p>
-                  <p class="fontDeposito2">
+                  <p class="fontDeposito2" style="padding-left: 0 !important;">
                     Proporcione su información en inglés. Hemos encontrado que hay nombres de cuenta proporcionados en chino, que no se aceptan para el proceso de
                     depósito y retiro. Si proporcionó el nombre de la cuenta china durante la verificación de identidad, comuníquese con nuestro servicio de atención
                     al cliente para modificarla. Después de eso, elimine su wallet de GMM y vuelva a vincular.
                   </p>
                 </li>
                 <li>
-                  <p class="fontDeposito1">
+                  <p>
                     Información Wallet
                   </p>
-                  <p class="fontDeposito2">
+                  <p class="fontDeposito2" style="padding-left: 0 !important;">
                     Proporcione todos los dígitos de forma correcta de la wallet de su preferencia de la opción copiar y pegar. Para evitar billeteras que no sean de su propiedad
                     nosotros recomendamos el uso de la billetera www.eyewallet.com ya que esta nos da todos los servicios requeridos para la satisfacción del usuario.
                   </p>
@@ -47,24 +45,27 @@
               <h2 class="fontTitDeposito">
                 2. Tarifas de servicio
               </h2>
-              <p class="fontDeposito2">
+              <p class="fontDeposito2" style="padding-left: 3% !important;">
                 Se cobran tarifas por retiro, que incluyen:
               </p>
-              <p class="fontDeposito1">
-                5% de GMM de su saldo en retiro y será cargado desde el saldo de su cuenta a la wallet
-              </p>
-              <p class="fontDeposito1">
-                5% de GMM de su saldo ingresado serán descontados al momento de procesar su pago desde su billetera
-              </p>
-              <ol>
-                <li class="fontDeposito2">
+              <ul class="fontDeposito1">
+                <li>
+                  5% de GMM de su saldo en retiro y será cargado desde el saldo de su cuenta a la wallet
+                </li>
+                <li>
+                  5% de GMM de su saldo ingresado serán descontados al momento de procesar su pago desde su billetera
+                </li>
+              </ul>
+              <br>
+              <ol class="fontDeposito2">
+                <li>
                   Si su solicitud de retiro es rechazada antes de la aprobación, la tarifa de servicio / de ingreso o retiro se devolverá a su cuenta.
                 </li>
-                <li class="fontDeposito2">
+                <li>
                   Sin embargo, si su retiro ya ha sido aprobado, debes verificar la wallet y la tarifa de servicio del 5% que cobra GMM
                   por los servicios prestados a su cuenta de GMM
                 </li>
-                <li class="fontDeposito2">
+                <li>
                   Transferencias entre cuentas GMM tendrá un costo de servicio del 1.5 % por la transacción realizada
                 </li>
               </ol>
@@ -81,7 +82,7 @@
         </el-row>
       </el-main>
     </div>
-    <el-footer>
+    <el-footer class="el-footer">
       <Footer></Footer>
     </el-footer>
   </el-container>
@@ -90,9 +91,10 @@
 <script>
   import Icons from "../components/components/Icoins"
   import Footer from "../components/components/Footer"
+  import Menu from "../components/components/Menu";
   export default {
     name: "deposit",
-    components: {Icons, Footer}
+    components: {Menu, Icons, Footer}
   }
 </script>
 
@@ -107,7 +109,7 @@
   }
 
   .backHeader {
-    background-image: url('../assets/Imgs/Fondo.jpg');
+    background-image: url('../assets/Imgs/backRed.jpg');
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center center;
@@ -127,22 +129,22 @@
   }
   .fontTitulosW {
     font-size: 3.4em;
-    color: #000;
-    text-align: left;
+    color: #FFF;
+    text-align: center;
     font-weight: bold;
     padding: 5%;
   }
   @media only screen and (max-width: 576px){
     .fontTitDeposito{
       font-size: 1.5rem;
-      color: #000;
+      color: #FFF;
       text-align: left;
       font-weight: bold;
       margin-left: 0.7em;
     }
     .fontDeposito1{
       font-size: 1.0rem;
-      color: #000;
+      color: #FFF;
       text-align: left;
       font-weight: bold;
       padding: 2%;
@@ -150,7 +152,7 @@
     }
     .fontDeposito2{
       font-size: 1.0rem;
-      color: #000;
+      color: #FFF;
       text-align: left;
       font-weight: 300;
       padding: 2%;
@@ -160,21 +162,21 @@
   @media only screen and (min-width: 577px) and (max-width: 992px){
     .fontTitDeposito{
       font-size: 1.9rem;
-      color: #000;
+      color: #FFF;
       text-align: left;
       font-weight: bold;
       margin-left: 0.5em;
     }
     .fontDeposito1{
       font-size: 1.2rem;
-      color: #000;
+      color: #FFF;
       text-align: left;
       font-weight: bold;
       margin-left: 0.9em;
     }
     .fontDeposito2{
       font-size: 1.2rem;
-      color: #000;
+      color: #FFF;
       text-align: left;
       font-weight: 300;
       margin-left: 0.9em;
@@ -183,22 +185,26 @@
   @media only screen and (min-width: 993px){
     .fontTitDeposito{
       font-size: 2.2rem;
-      color: #000;
+      color: #FFF;
       text-align: left;
       font-weight: bold;
+      line-height: 50px;
+      padding: 3%;
     }
     .fontDeposito1{
       font-size: 1.2rem;
-      color: #000;
+      color: #FFF;
       text-align: justify;
       font-weight: bold;
+      padding-left: 7%;
       line-height: 40px;
     }
     .fontDeposito2{
       font-size: 1.2rem;
-      color: #000;
+      color: #FFF;
       text-align: justify;
       font-weight: 300;
+      padding-left: 7%;
       line-height: 40px;
     }
   }
