@@ -181,13 +181,13 @@
 
   @media only screen and (min-width: 768px) and (max-width: 992px){
     .widthIcos {
-      width: 60%;
+      width: 45%;
     }
   }
 
   @media only screen and (min-width: 993px){
     .widthIcos {
-      width: 80%;
+      width: 60%;
     }
   }
 

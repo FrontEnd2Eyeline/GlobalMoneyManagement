@@ -22,7 +22,7 @@
           </el-col>
           <div>
             <el-col :md="24" :lg="8">
-              <div class="center2">
+              <div class="center2" style="padding: 10%">
                 <el-button class="btnRegister center"  @click="goTo" size="medium" >
                   CREA TU CUENTA
                 </el-button>
@@ -147,13 +147,13 @@
                       <div>
                         <el-row>
                           <div>
-                            <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
+                            <el-col :span="8" :sm="8" :md="8" :lg="4">
                               <img src="../../assets/Imgs/icono_facebook.png" alt="" class="icoRedes">
                             </el-col>
-                            <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
+                            <el-col :span="8" :sm="8" :md="8" :lg="4">
                               <img src="../../assets/Imgs/icono_twitter.png" alt="" class="icoRedes">
                             </el-col>
-                            <el-col :span="8" :sm="8" :md="8" :lg="8" :xl="8">
+                            <el-col :span="8" :sm="8" :md="8" :lg="4">
                               <img src="../../assets/Imgs/icono_instagram.png" alt="" class="icoRedes">
                             </el-col>
                           </div>
