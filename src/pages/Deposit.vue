@@ -1,5 +1,5 @@
 <template>
-  <el-container class="backHeader">
+  <el-container>
     <div class="martitle">
     </div>
     <div class="center martitle">
@@ -98,6 +98,14 @@
 
 <style scoped>
 
+  .el-footer {
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
   .backHeader {
     background-image: url('../assets/Imgs/Fondo.jpg');
     background-repeat: no-repeat;
@@ -119,7 +127,7 @@
   }
   .fontTitulosW {
     font-size: 3.4em;
-    color: #FFF;
+    color: #000;
     text-align: left;
     font-weight: bold;
     padding: 5%;
@@ -178,21 +186,20 @@
       color: #000;
       text-align: left;
       font-weight: bold;
-      margin-left: 0.5em;
     }
     .fontDeposito1{
       font-size: 1.2rem;
       color: #000;
-      text-align: left;
+      text-align: justify;
       font-weight: bold;
-      margin-left: 1em;
+      line-height: 40px;
     }
     .fontDeposito2{
       font-size: 1.2rem;
       color: #000;
-      text-align: left;
+      text-align: justify;
       font-weight: 300;
-      margin-left: 1em;
+      line-height: 40px;
     }
   }
 </style>
