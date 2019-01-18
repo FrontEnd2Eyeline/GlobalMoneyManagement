@@ -14,7 +14,7 @@ export default [
     beforeEnter: Trans.routeMiddleware,
     children: [
       {
-        path: '',
+        path: 'login',
         name: 'login',
         component: load('Login')
       },
@@ -27,6 +27,26 @@ export default [
         path: 'register',
         name: 'register',
         component: load('Register')
+      },
+      {
+        path: '',
+        name: 'contact',
+        component: load('Contact')
+      },
+      {
+        path: 'yourbusiness',
+        name: 'yourbusiness',
+        component: load('YourBusiness')
+      },
+      {
+        path: 'feedback',
+        name: 'feedback',
+        component: load('Feedback')
+      },
+      {
+        path: 'enrollment',
+        name: 'enrollment',
+        component: load('Enrollment')
       },
       {
         path: '*',
