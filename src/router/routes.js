@@ -29,7 +29,7 @@ export default [
         component: load('Register')
       },
       {
-        path: '',
+        path: 'contact',
         name: 'contact',
         component: load('Contact')
       },
@@ -42,6 +42,11 @@ export default [
         path: 'feedback',
         name: 'feedback',
         component: load('Feedback')
+      },
+      {
+        path: '',
+        name: 'deposito',
+        component: load('Deposit')
       },
       {
         path: 'enrollment',

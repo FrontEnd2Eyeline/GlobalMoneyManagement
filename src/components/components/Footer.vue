@@ -22,7 +22,7 @@
           </el-col>
           <div>
             <el-col :md="24" :lg="8">
-              <div class="center2">
+              <div class="center2" style="padding: 12%">
                 <el-button class="btnRegister center"  @click="goTo" size="medium" >
                   CREA TU CUENTA
                 </el-button>

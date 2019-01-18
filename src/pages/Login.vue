@@ -143,7 +143,7 @@
     background-attachment: inherit;
     background-position: center center;
     background-size: cover;
-    padding: 0%;
+    padding: 0;
   }
 
   /*Textos*/
