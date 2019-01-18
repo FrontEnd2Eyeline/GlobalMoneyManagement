@@ -1,7 +1,7 @@
 <template>
     <el-container>
       <el-row :gutter="20">
-        <el-col :span="1">
+        <el-col :span="2">
           <div class="grid-content bg-purple">INICIO</div>
         </el-col>
         <el-col :span="1.9">
@@ -19,7 +19,7 @@
         <el-col :span="1.9">
           <div class="grid-content bg-purple">ESTRUCTURA</div>
         </el-col>
-        <el-col :span="13">
+        <el-col :span="12">
           <div class="grid-content bg-purple">LÍDERES</div>
         </el-col>
         <el-col :span="0.1">

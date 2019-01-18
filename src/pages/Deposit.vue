@@ -91,7 +91,7 @@
   import Icons from "../components/components/Icoins"
   import Footer from "../components/components/Footer"
   export default {
-    name: "Deposito",
+    name: "deposit",
     components: {Icons, Footer}
   }
 </script>
