@@ -6,17 +6,17 @@
             <el-col class="espacio" :lg="4">
               &nbsp;
             </el-col>
-            <el-col :lg="2">
+            <el-col :lg="1">
               <img src="../../assets/Imgs/logo_GMM.png" class="logoGMM hidden-md-and-down">
             </el-col>
-            <el-col :span="2">
+            <el-col :lg="2">
               <div>
                 <p class="colorMenu">
                   LOGIN
                 </p>
               </div>
             </el-col>
-            <el-col :lg="2">
+            <el-col :lg="1">
               <div>
                 <p class="colorMenu">
                   SIGNUP
@@ -66,7 +66,7 @@
                 </p>
               </div>
             </el-col>
-            <el-col :lg="3" class="espacio">
+            <el-col class="espacio" :lg="4">
               <div>
                 &nbsp;
               </div>
