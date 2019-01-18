@@ -13,11 +13,16 @@
                 <div class="grid-content bg-purple-light wid100 marButtonsTexts">
                   <div for="planId" class="md-layout-item md-small-size-100">
                     <el-field :class="getValidationClass('planId')">
-                      <el-select class="wid100" slot="prepend" v-bind:placeholder="$t('SelectPlan')" name="planId"
+                      <el-select class="wid100"
+                                 slot="prepend"
+                                 :placeholder="$t('SelectPlan')" name="planId"
                                  id="planId"
-                                 v-model="form.planId" md-dense :disabled="sending">
-                        <el-option v-for="pack in packs " v-bind:value="pack.nombre" :key="pack.id">
-                          {{pack.nombre}}
+                                 v-model="form.planId"
+                                 :disabled="sending">
+                        <el-option v-for="pack in plans "
+                                   :value="pack.id"
+                                   :key="pack.nombre"
+                                  :label="pack.nombre">
                         </el-option>
                       </el-select>
                     </el-field>
@@ -31,12 +36,17 @@
                 <div class="grid-content bg-purple-light ">
                   <div for="paisId" class="md-layout-item md-small-size-100 marButtonsTexts">
                     <el-field :class="getValidationClass('paisId')">
-                      <el-select class="wid100" slot="prepend" v-bind:placeholder="$t('SelectCountry')" name="paisId"
+                      <el-select class="wid100"
+                                 :placeholder="$t('SelectCountry')"
+                                 name="paisId"
                                  id="paisId"
-                                 v-model="form.paisId" md-dense :disabled="sending">
-                        <el-option v-for="country in countries" v-bind:value="country.nombre" :key="countries.id"
-                                   :label="country.name">
-                          {{country.nombre}}
+                                 v-model="form.paisId"
+                                 filterable
+                                 :disabled="sending">
+                        <el-option v-for="country in countries"
+                                   :key="country.nombre"
+                                   :value="country.id"
+                                   :label="country.nombre">
                         </el-option>
                       </el-select>
                     </el-field>
@@ -94,25 +104,26 @@
               </div>
               <div class="md-layout md-gutter">
                 <div for="password" class="md-layout-item md-small-size-100 ">
-                  <el-field :class="getValidationClass('password')">
+                  <field :class="getValidationClass('password')">
                     <el-input placeholder="Contraseña" type="password" name="password" id="password"
                               autocomplete="given-name"
-                              v-model="form.password" :disabled="sending"/>
+                              v-model="form.password"
+                              :disabled="sending"/>
                     <span class="md-error"
                           v-if="!$v.form.password.required">Contraseña es requerida</span>
                     <span class="md-error" v-else-if="!$v.form.password.minLength">La contraseña debe tener mínimo 6 caracteres</span>
-                  </el-field>
+                  </field>
                 </div>
               </div>
             </el-card-content>
             <!--<el-progress-bar md-mode="indeterminate" v-if="sending"/>-->
-            <el-card-actions>
+            <md-card-actions>
               <el-row :gutter="10">
-                <el-col :md="12" :lg="12">
-                  <div>
-                    <p class="fontCrearAccount">
+                <el-col  :md="12" :lg="12">
+                  <div @click="doLogin">
+                    <md-button class="fontCrearAccount">
                       ¿Ya tienes cuenta?
-                    </p>
+                    </md-button>
                   </div>
                 </el-col>
                 <el-col :md="12" :lg="12">
@@ -127,14 +138,14 @@
                 </h4>
               </div>
 
-            </el-card-actions>
+            </md-card-actions>
           </el-card>
           <!--<el-snackbar :md-active.sync="userSaved">{{ lastUser }}</el-snackbar>-->
         </form>
       </div>
     </el-main>
-    <el-footer >
-     <Footer></Footer>
+    <el-footer>
+      <Footer></Footer>
     </el-footer>
     <!--<router-view></router-view>-->
   </el-container>
@@ -144,12 +155,12 @@
 <style lang="scss" scoped>
 
   .el-footer {
-     padding: 0px;
-     -webkit-box-sizing: border-box;
-     box-sizing: border-box;
-     -ms-flex-negative: 0;
-     flex-shrink: 0;
-   }
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
 
   .md-progress-bar {
     position: absolute;
@@ -162,7 +173,7 @@
     color: #ffe400;
   }
 
-  .white{
+  .white {
     color: white;
   }
 
@@ -290,7 +301,7 @@
   import Icoins from '../components/components/Icoins'
   import Footer from '../components/components/Footer'
 
-export default {
+  export default {
     name: 'Register',
     components: {Footer, Icoins},
     mixins: [validationMixin],
@@ -308,13 +319,13 @@ export default {
       userSaved: false,
       sending: false,
       lastUser: null,
-      packs: []
+      plans: []
     }),
     validations: {
       form: {
         nombre: {
           required,
-          minLength: minLength(3),
+          minLength: minLength(4),
           maxLength: maxLength(45)
         },
         apellido: {
@@ -345,7 +356,7 @@ export default {
     },
     created: function () {
       this.getCountries()
-      this.getPack()
+      this.getPlan()
     },
     methods: {
       getValidationClass (fieldName) {
@@ -361,6 +372,7 @@ export default {
         console.log('id pais', this.form.paisId)
         console.log('id pakc', this.form.planId)
         console.log('datos', this.form)
+        console.log(this.countries)
         Api.post('/auth/registro',
           this.form
         ).then(data => {
@@ -385,16 +397,21 @@ export default {
 
         // Instead of this timeout, here you can call your API
       },
+      doLogin () {
+        this.$router.push({name: 'login'})
+      },
       getCountries () {
         Api.get('/general/paises').then((data) => {
           this.countries = data.data
           console.log(this.countries)
         })
       },
-      getPack () {
+      getPlan () {
         Api.get('/general/planes').then(data => {
-          this.packs = data.data
-          console.log(this.pack)
+          this.plans = data.data
+          console.log(this.plans)
+        }).catch(error => {
+          console.log(error)
         })
       },
       validateUser () {

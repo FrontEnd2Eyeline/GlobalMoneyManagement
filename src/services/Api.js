@@ -1,6 +1,7 @@
 import axios from 'axios'
+import Auth from './AuthUser'
 
-const API_URL = 'http://f5ee89c6.ngrok.io'
+const API_URL = 'http://d117b955.ngrok.io'
 
 let header = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -23,7 +24,6 @@ export default class Api {
       }
       axios.get(url + '?' + jsonParams, {headers: header}).then(data => {
         resolve(data)
-        console.log('hizo get', data)
       }).catch(error => {
         console.log('error en api', error)
       })
@@ -35,7 +35,7 @@ export default class Api {
     if (user != null) {
       header = {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Bearer ' + user.accessParam()
+        'Authorization': 'Bearer ' + `${Auth.accessParam()}`
       }
     }
     let jsonParams = this.jsonToURLEncoded(body)

@@ -6,25 +6,23 @@ import Api from './services/Api'
 import Vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css'
 import 'material-icons/iconfont/material-icons.css'
-import { MdButton, MdContent, MdTabs } from 'vue-material/dist/components'
+
 import 'vue-material/dist/vue-material.min.css'
 import VueMaterial from 'vue-material'
 import Vuelidate from 'vuelidate'
 import router from './router'
 import { i18n } from './plugins/i18n'
-import ElementUI from 'element-ui'
+import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import Vuex from 'vuex'
 import {store} from './store'
 
 Vue.use(Vuex)
-Vue.use(ElementUI)
+Vue.use(Element)
 Vue.use(Vuelidate)
 Vue.use(Vuesax)
 Vue.use(VueMaterial)
-Vue.use(MdButton)
-Vue.use(MdContent)
-Vue.use(MdTabs)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -34,6 +32,6 @@ new Vue({
   router,
   i18n,
   Api,
-  Vuesax,
+  Element,
   render: (h) => h(App)
-}).$mount('#app')
+})

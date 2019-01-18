@@ -28,7 +28,7 @@
           </div>
 
           <div class="marBut10px">
-            <el-button class="btn btn-lg bacgroundBtnOpacity btn-block" vs-type="submit">{{$t('Login')}}</el-button>
+            <el-button class="btn btn-lg bacgroundBtnOpacity btn-block" @click="login">{{$t('Login')}}</el-button>
           </div>
 
         </form>
@@ -169,7 +169,6 @@
 <script>
   import AuthUser from '../services/AuthUser'
   import {required, minLength} from 'vuelidate/lib/validators'
-  import App from '@/App'
   import Footer from '../components/components/Footer'
   import Icoins from '../components/components/Icoins'
 
@@ -204,7 +203,6 @@
       login () {
         AuthUser.login(this.email, this.password)
           .then(data => {
-            console.log('inicio sesion', data)
             this.loginSucess(data)
           }).catch(error => {
             this.loginFail()
@@ -219,20 +217,13 @@
         }
         this.error = false
         this.success = true
-        App.loginControl = true
-
-        this.$router.push({name: 'home'})
+        this.$router.push({name: 'Cpanel'})
         this.$nextTick(function () {
-          console.log('a ver que hacer')
         })
         console.log(this.$router.currentRoute)
       },
       loginFail () {
         this.error = 'Login failed!'
-      },
-      goTo () {
-        this.$router.push(this.$route.query.replace || ({name: 'register'}))
-        console.log(this.$router.currentRoute)
       }
     }
   }

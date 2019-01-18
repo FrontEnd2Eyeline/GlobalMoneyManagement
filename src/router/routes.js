@@ -29,6 +29,11 @@ export default [
         component: load('Register')
       },
       {
+        path: 'cpanel',
+        name: 'Cpanel',
+        component: load('UserPanel')
+      },
+      {
         path: '*',
         component: load('404')
       }

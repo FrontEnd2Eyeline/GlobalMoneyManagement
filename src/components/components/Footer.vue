@@ -23,7 +23,7 @@
           <div>
             <el-col :md="24" :lg="8">
               <div class="center2">
-                <el-button class="btnRegister center" size="medium">
+                <el-button class="btnRegister center"  @click="goTo" size="medium" >
                   CREA TU CUENTA
                 </el-button>
               </div>
@@ -180,7 +180,6 @@
         </el-col>
       </el-row>
     </div>
-
     <div class="backSecundary">
       <el-row>
         <div>
@@ -198,7 +197,12 @@
 
 <script>
   export default {
-    name: 'Footer'
+    name: 'Footer',
+    methods: {
+      goTo () {
+        this.$router.push({name: 'register'})
+      }
+    }
   }
 </script>
 
