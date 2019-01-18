@@ -98,13 +98,13 @@
     /*padding-bottom: 2%;*/
   /*}*/
 
-  .fontTitulosW {
-    font-size: 3.4em;
-    color: #FFF;
-    text-align: center;
-    font-weight: bold;
-    padding: 5%;
-  }
+  /*.fontTitulosW {*/
+    /*font-size: 3.4em;*/
+    /*color: #FFF;*/
+    /*text-align: center;*/
+    /*font-weight: bold;*/
+    /*padding: 5%;*/
+  /*}*/
 
   .fontTitValorBitcoin {
     font-size: 1.5em;
@@ -181,13 +181,13 @@
 
   @media only screen and (min-width: 768px) and (max-width: 992px){
     .widthIcos {
-      width: 60%;
+      width: 45%;
     }
   }
 
   @media only screen and (min-width: 993px){
     .widthIcos {
-      width: 80%;
+      width: 60%;
     }
   }
 

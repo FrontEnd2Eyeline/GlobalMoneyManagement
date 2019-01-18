@@ -3,27 +3,27 @@
       <el-main>
         <div>
           <el-row>
-            <el-col class="espacio" :lg="2">
+            <el-col class="espacio" :lg="4">
               &nbsp;
             </el-col>
-            <el-col :lg="2">
+            <el-col :lg="1">
               <img src="../../assets/Imgs/logo_GMM.png" class="logoGMM hidden-md-and-down">
             </el-col>
-            <el-col :span="2">
+            <el-col :lg="2">
               <div>
                 <p class="colorMenu">
                   LOGIN
                 </p>
               </div>
             </el-col>
-            <el-col :lg="2">
+            <el-col :lg="1">
               <div>
                 <p class="colorMenu">
                   SIGNUP
                 </p>
               </div>
             </el-col>
-            <el-col class="espacio" :lg="2">
+            <el-col class="espacio" :lg="3">
               <div>
                 &nbsp;
               </div>
@@ -35,7 +35,7 @@
                 </p>
               </div>
             </el-col>
-            <el-col :lg="2">
+            <el-col :lg="1">
               <div>
                 <p class="colorMenu">
                   LEGALES
@@ -49,7 +49,7 @@
                 </p>
               </div>
             </el-col>
-            <el-col :lg="2">
+            <el-col :lg="1">
               <p class="colorMenu">
                 FEEDBACK
               </p>
@@ -59,14 +59,14 @@
                 CONTACTO
               </p>
             </el-col>
-            <el-col :lg="2">
+            <el-col :lg="1">
               <div>
                 <p class="colorMenu">
                   ESPAÑOL
                 </p>
               </div>
             </el-col>
-            <el-col :lg="2" class="espacio">
+            <el-col :lg="4" class="espacio">
               <div>
                 &nbsp;
               </div>
@@ -111,7 +111,7 @@
 
   @media only screen and (min-width: 1201px)  {
     .logoGMM{
-      width: 2.5em;
+      width: 3.8em;
       margin: 0 auto;
       display: block;
     }
