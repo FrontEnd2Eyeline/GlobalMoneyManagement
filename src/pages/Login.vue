@@ -138,7 +138,7 @@
   /* BackGround */
 
   .backHeader {
-    background-image: url('../assets/Imgs/Fondo.jpg');
+    background-image: url('../assets/Imgs/backRed.jpg');
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center center;
@@ -178,9 +178,8 @@
   import {required, minLength, email, maxLength} from 'vuelidate/lib/validators'
   import App from '@/App'
   import Footer from '../components/components/Footer'
-  import Menu from "../components/components/Menu"
+  import Menu from '../components/components/Menu'
   import Icoins from '../components/components/Icoins'
-
 
   export default {
     components: {Menu, Icoins, Footer},
