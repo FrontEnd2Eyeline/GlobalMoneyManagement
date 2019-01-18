@@ -49,6 +49,11 @@ export default [
         component: load('Enrollment')
       },
       {
+        path: 'cpanel',
+        name: 'Cpanel',
+        component: load('UserPanel')
+      },
+      {
         path: '*',
         component: load('404')
       }

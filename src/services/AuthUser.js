@@ -1,57 +1,33 @@
 import Api from './Api'
-import App from '@/App'
 
-class AuthUser {
-  static user = {
-    serializeToken: false,
-    token: ''
-  }
+export default {
+  token: null,
 
-  static accessParam () {
-    if (this.user) {
-      this.user.token = localStorage.getItem('access-token')
-      return this.user.token
-    }
-    return null
-  }
+  getToken () {
+    this.token = window.localStorage.getItem('access-token')
+  },
+  accessParam () {
+    this.token = window.localStorage.getItem('access-token')
+    return this.token
+  },
+  setToken (token) {
+    this.token = window.localStorage.setItem('access-token', token)
+  },
 
-  static login (user, password) {
+  login (user, password) {
     return new Promise((resolve, reject) => {
       Api.post('/auth/login', {email: user, password: password})
         .then(data => {
-          console.log(data)
-          const token = data.data.serializeToken
-          this.setUser(data.data)
-          localStorage.setItem('access-token', token)
-          // commit('AUTH_SUCCESS', token)
-          // dispatch('USER_REQUEST')
+          this.setToken(data.data.serializeToken)
+          console.log(this.getToken())
           resolve(data)
-          console.log('logeo bien', data)
         }).catch(err => {
           reject(err)
-          console.log('erorr en el login', err)
         })
     })
-  }
+  },
 
-  static setUser (user) {
-    this.user = user
-
-    console.log('usuario', this.user)
-    console.log('token', this.user.serializeToken)
-    localStorage.setItem('user', user)
-  }
-
-  static isLogged () {
-    if (localStorage.getItem('access-token')) {
-      console.log('auttttt true', this.user.serializeToken)
-      App.loginControl = true
-      return true
-    } else {
-      console.log('auttttt', this.user.serializeToken)
-      return false
-    }
+  isLogged () {
+    return this.token != null
   }
 }
-
-export default AuthUser
