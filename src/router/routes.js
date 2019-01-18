@@ -59,9 +59,19 @@ export default [
         component: load('Kyc')
       },
       {
+        path: 'politics',
+        name: 'politics',
+        component: load('Politics')
+      },
+      {
         path: 'nosotros',
         name: 'nosotros',
         component: load('WeAre')
+      },
+      {
+        path: 'index',
+        name: 'index',
+        component: load('Index')
       },
       {
         path: 'responsabilidades',

@@ -94,7 +94,7 @@
   import Menu from "../components/components/Menu";
   export default {
     name: "deposit",
-    components: {Menu, Icons, Footer}
+    components: {Menu, Icoins, Footer}
   }
 </script>
 

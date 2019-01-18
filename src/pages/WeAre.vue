@@ -2,9 +2,6 @@
   <el-container class="backHeader">
     <Menu></Menu>
     <div class="martitle">
-      &nbsp;
-    </div>
-    <div class="martitle">
       <h2 class="fontTitulosW">Sobre Nosotros</h2>
     </div>
     <Icoins class="marPage"></Icoins>
@@ -103,7 +100,7 @@
   import Footer from "../components/components/Footer"
   import Menu from "../components/components/Menu";
   export default {
-    name: "WeAre",
+    name: "nosotros",
     components: {Menu, Footer, Icoins}
   }
 </script>
