@@ -1,5 +1,5 @@
 <template>
-  <el-container class="backHeader">
+  <el-container class="backHeaderRed">
     <Icoins></Icoins>
     <el-main>
       <div class="center">
@@ -250,6 +250,15 @@
 
   .backHeader {
     background-image: url('../assets/Imgs/Fondo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center center;
+    background-size: cover;
+    padding: 0%;
+  }
+
+  .backHeaderRed {
+    background-image: url('../assets/Imgs/backRed.jpg');
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center center;

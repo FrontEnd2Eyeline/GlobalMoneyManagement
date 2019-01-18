@@ -1,5 +1,6 @@
 <template>
-  <el-container class="backHeader">
+  <el-container class="backHeaderwe">
+    <Menu></Menu>
     <div class="martitle">
     </div>
     <div class="center martitle">
@@ -98,6 +99,15 @@
 
   /* BackGround */
 
+  .backHeaderwe {
+    background-image: url('../assets/Imgs/backRed.jpg');
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center center;
+    background-size: cover;
+    padding: 0%;
+  }
+
   .backHeader {
     background-image: url('../assets/Imgs/Fondo.jpg');
     background-repeat: no-repeat;
@@ -117,14 +127,14 @@
   }
 
   .degrade {
-    background: rgba(0, 28, 36, 0.9);
-    background: -moz-linear-gradient(left, rgba(0, 28, 36, 0.9) 0%, rgba(0, 28, 36, 1) 0%, rgba(0, 195, 255, 1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0, 28, 36, 0.9)), color-stop(0%, rgba(0, 28, 36, 1)), color-stop(100%, rgba(0, 195, 255, 1)));
-    background: -webkit-linear-gradient(left, rgba(0, 28, 36, 0.9) 0%, rgba(0, 28, 36, 1) 0%, rgba(0, 195, 255, 1) 100%);
-    background: -o-linear-gradient(left, rgba(0, 28, 36, 0.9) 0%, rgba(0, 28, 36, 1) 0%, rgba(0, 195, 255, 1) 100%);
-    background: -ms-linear-gradient(left, rgba(0, 28, 36, 0.9) 0%, rgba(0, 28, 36, 1) 0%, rgba(0, 195, 255, 1) 100%);
-    background: linear-gradient(to right, rgba(0, 28, 36, 0.9) 0%, rgba(0, 28, 36, 1) 0%, rgba(0, 195, 255, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#001c24', endColorstr='#00c3ff', GradientType=1);
+    background: rgba(240,20,20,0.96);
+    background: -moz-linear-gradient(left, rgba(240,20,20,0.96) 0%, rgba(0,0,0,0.96) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,20,20,0.96)), color-stop(100%, rgba(0,0,0,0.96)));
+    background: -webkit-linear-gradient(left, rgba(240,20,20,0.96) 0%, rgba(0,0,0,0.96) 100%);
+    background: -o-linear-gradient(left, rgba(240,20,20,0.96) 0%, rgba(0,0,0,0.96) 100%);
+    background: -ms-linear-gradient(left, rgba(240,20,20,0.96) 0%, rgba(0,0,0,0.96) 100%);
+    background: linear-gradient(to right, rgba(240,20,20,0.96) 0%, rgba(0,0,0,0.96) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f01414', endColorstr='#000000', GradientType=1 );
   }
 
   .backWhite {
@@ -245,9 +255,10 @@
 <script>
   import Icoins from '../components/components/Icoins'
   import Footer from '../components/components/Footer'
+  import Menu from '../components/components/Menu'
 
-  export default {
+export default {
     name: 'Enrollment',
-    components: {Footer, Icoins}
+    components: {Menu, Footer, Icoins}
   }
 </script>

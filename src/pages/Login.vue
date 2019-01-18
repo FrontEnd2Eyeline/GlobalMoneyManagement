@@ -56,6 +56,10 @@
 
 <style lang="scss" scoped>
 
+  span{
+    color: yellow;
+  }
+
 
   .el-footer {
     padding: 0px;

@@ -209,7 +209,7 @@ export default {
   }
 
   .backMain {
-    background-image: url('../assets/Imgs/Contact/backWhiteContact.png');
+    background-image: url('../assets/Imgs/Contact/whiteContact.png');
     background-repeat: no-repeat;
     background-attachment: inherit;
     background-position: center center;
