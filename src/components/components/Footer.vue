@@ -208,18 +208,18 @@
   /*Fondos*/
 
   .backSectionFoot {
-    background-image: url('../../assets/Imgs/fondo_espacio.png');
+    background-image: url('../../assets/Imgs/backFooterImg.jpg');
     background-repeat: initial;
     background-attachment: fixed;
-    /* background-size: cover; */
+    background-size: cover;
   }
 
   .backPrimary {
-    background: #161d44 !important;
+    background: black !important;
   }
 
   .backSecundary {
-    background: #576289 !important;
+    background: black !important;
   }
 
   /*Centrado*/
@@ -240,7 +240,7 @@
 
   .btnRegister {
     background: hsla(0, 0%, 100%, 0.500);
-    color: white;
+    color: black;
     border-radius: 12px;
     font-size: 1.5em;
   }
@@ -267,7 +267,7 @@
     }
 
     .fontSiz {
-      color: white !important;
+      color: black !important;
       font-size: 2.6em;
       text-align: center;
       line-height: 30px;
@@ -276,7 +276,7 @@
 
     .fontSizecard2 {
       font-size: 1.2em !important;
-      color: white !important;
+      color: black !important;
       text-align: center;
       padding: 5%;
     }
@@ -302,7 +302,7 @@
     }
 
     .fontSiz {
-      color: white !important;
+      color: black !important;
       line-height: 50px;
       font-size: 3em;
       text-align: center;
@@ -311,7 +311,7 @@
     .fontSizecard2 {
       font-size: 1.5em !important;
       line-height: 30px;
-      color: white !important;
+      color: black !important;
       text-align: center;
       padding: 5%;
     }
@@ -333,7 +333,7 @@
     }
 
     .fontSiz {
-      color: white !important;
+      color: black !important;
       font-size: 3.5em;
       line-height: 50px;
       text-align: center;
@@ -343,7 +343,7 @@
     .fontSizecard2 {
       font-size: 1.8em !important;
       line-height: 30px;
-      color: white !important;
+      color: black !important;
       text-align: left;
       padding: 5%;
     }
