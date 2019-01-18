@@ -24,6 +24,7 @@ export default [
         component: load('Home')
       },
       {
+        
         path: 'register',
         name: 'register',
         component: load('Register')
