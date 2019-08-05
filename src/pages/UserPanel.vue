@@ -1,20 +1,12 @@
 <template>
   <el-container>
     <el-container>
-      <div>
+      <!--<HeaderPanel1></HeaderPanel1>-->
+      <HeaderPanel2></HeaderPanel2>
 
+      <el-header style="background-color: white">
+      </el-header>
 
-        <el-row>
-          <el-col :span="24">
-            <div>
-              <HeaderPanel1></HeaderPanel1>
-            </div>
-          </el-col>
-        </el-row>
-
-      </div>
-      <el-header>
-        <HeaderPanel2></HeaderPanel2>
         <!--<el-row :gutter="20">-->
         <!--<el-col :span="1">-->
           <!--<div class="grid-content bg-purple">INICIO</div>-->
@@ -52,8 +44,7 @@
         <!--<el-col style="text-align: right; font-size: 12px" :span="1.1">-->
           <!--<div class="grid-content bg-purple">CONFIGURACIÓN</div>-->
         <!--</el-col>-->
-      </el-row>
-      </el-header>
+      <!--</el-row>-->
       <el-main :gutter="20">
         <el-row>
           <el-col :span="16">
@@ -144,10 +135,10 @@
 <script>
   import Api from '@/services/Api'
   import HeaderPanel2 from "../components/components/HeaderPanel2";
-  import HeaderPanel1 from "../components/components/HeaderPanel1";
+
 
   export default {
-    components: {HeaderPanel1, HeaderPanel2},
+    components: {HeaderPanel2},
     data () {
       return {
         user: '',

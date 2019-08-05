@@ -11,9 +11,9 @@
 </template>
 
 <script>
-  import Menu from "../components/components/Menu"
-  import Icoins from "../components/components/Icoins"
-  import Footer from "../components/components/Footer"
+  import Menu from "./components/components/Menu"
+  import Icoins from "./components/components/Icoins"
+  import Footer from "./components/components/Footer"
     export default {
         name: "Index",
         components: {Menu, Icoins, Footer}

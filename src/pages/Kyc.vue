@@ -51,13 +51,30 @@
       </el-col>
     </el-row>
     <el-row>
-      <el-col :lg="24">
+      <el-col :lg="7">
+        &nbsp;
+      </el-col>
+      <el-col :lg="10">
         <br><br>
-        <h1 style="text-align: center">Aqui va un slider</h1>
+        <el-carousel  indicator-position="outside">
+          <el-carousel-item>
+
+          </el-carousel-item>
+          <el-carousel-item>
+
+          </el-carousel-item>
+          <el-carousel-item>
+
+          </el-carousel-item>
+        </el-carousel>
         <br><br>
+      </el-col>
+      <el-col :lg="7">
+        &nbsp;
       </el-col>
     </el-row>
     <el-row :gutter="10">
+      
       <el-col :lg="6">
         <h1 class="fontTitKYC">
           Cuenta negocios
@@ -121,9 +138,10 @@
   import Icoins from "../components/components/Icoins"
   import Footer from "../components/components/Footer"
   import Menu from "../components/components/Menu";
+  import ElCarouselItem from "../../dist/static/js/vendor.60eeb562ede9b666a552";
   export default {
     name: "kyc",
-    components: {Menu, Icoins, Footer}
+    components: {ElCarouselItem, Menu, Icoins, Footer}
   }
 </script>
 
@@ -156,6 +174,13 @@
     font-weight: bold;
     padding: 5%;
     line-height: 50px;
+  }
+  .monik:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+
+  .monik:nth-child(2n+1) {
+    background-color: #d3dce6;
   }
   @media only screen and (max-width: 576px){
     .fontTitKYC{

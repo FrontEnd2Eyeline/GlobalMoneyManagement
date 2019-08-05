@@ -22,7 +22,7 @@
           </el-col>
           <div>
             <el-col :md="24" :lg="8">
-              <div class="center2" style="padding: 10%">
+              <div class="center2 espacio">
                 <el-button class="btnRegister center"  @click="goTo" size="medium" >
                   CREA TU CUENTA
                 </el-button>
@@ -298,6 +298,7 @@
     ul > li{
       text-align: center;
     }
+
   }
 
   @media only screen and (min-width: 768px) and (max-width: 992px) {
@@ -328,6 +329,7 @@
       color: #FFF !important;
       text-align: center !important;
     }
+
 
   }
 
@@ -360,6 +362,7 @@
       color: #FFF !important;
       text-align: center !important;
     }
+
   }
 
   a, a:hover {
@@ -417,6 +420,20 @@
 
     .icoBits {
       width: 12em !important;
+    }
+  }
+
+  /*Espacio*/
+
+  @media only screen and (max-width: 1200px){
+    .espacio{
+      padding: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1201px){
+    .espacio{
+      padding: 10%;
     }
   }
 

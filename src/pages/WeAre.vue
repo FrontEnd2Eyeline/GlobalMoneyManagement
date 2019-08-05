@@ -1,35 +1,27 @@
 <template>
   <el-container class="backHeader">
     <Menu></Menu>
-    <div class="martitle">
-      <h2 class="fontTitulosW">Sobre Nosotros</h2>
-    </div>
-    <Icoins class="marPage"></Icoins>
+    <h2 class="fontTitulosW">Sobre Nosotros</h2>
+    <Icoins class= "visibilidad titulo"></Icoins>
     <el-main>
       <div>
-        <el-row>
-          <el-col :span="24">
-            &nbsp;
-          </el-col>
-        </el-row>
         <el-row :gutter="10">
-          <el-col :lg="8">
+          <el-col :xs="3" :sm="2" :md="4" :lg="5">
             &nbsp;
           </el-col>
-          <el-col :lg="16">
+          <el-col :xs="18" :sm="20" :md="18" :lg="17">
             <p class="fontNosotros">
               Fundada en 2017, GMMCLUB es una plataforma de comercio de activos digitales líder en operaciones el mundo.
-            </p>
-            <p class="fontNosotros">
               Actualmente, GMMCLUB ofrece operaciones fijas con los principales activos digitales, donde son operadas por
               Expertos de trading en activos digitales donde estan incluidos Bitcoin, Bitcoin Cash, Ethereum,
               Classic y Litecoin.
-            </p>
-            <p class="fontNosotros">
               GMMCLUB se ha expandido recientemente a los Estados Unidos
               y espera atender a más usuarios en todo el mundo en el futuro.
             </p>
           </el-col>
+          <el-col :xs="3" :sm="2" :md="2" :lg="2">
+            &nbsp;
+          </el-col>
         </el-row>
         <el-row>
           <el-col :span="24">
@@ -37,12 +29,23 @@
           </el-col>
         </el-row>
         <el-row :gutter="10">
-          <el-col :lg="8">
+          <el-col :xs="3" :sm="2" :md="2" :lg="2">
+            &nbsp;
+          </el-col>
+          <el-col :xs="19" :sm="20" :md="20" :lg="6">
             <h2 class="fontTitNosotros">
               Nuestra misión
             </h2>
           </el-col>
-          <el-col :lg="16">
+          <el-col :xs="2" :sm="2" :md="4" :lg="14">
+            &nbsp;
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :xs="3" :sm="2" :md="4" :lg="5">
+            &nbsp;
+          </el-col>
+          <el-col :xs="18" :sm="20" :md="18" :lg="17">
             <p class="fontNosotros">
               Creemos que bitcoin y blockchain eliminarán las barreras comerciales, mejorarán la eficiencia
               de las transacciones y transformarán drásticamente nuestro sistema financiero global.
@@ -54,6 +57,9 @@
               normativos en los Estados Unidos y el mundo.
             </p>
           </el-col>
+          <el-col :xs="3" :sm="2" :md="2" :lg="2">
+            &nbsp;
+          </el-col>
         </el-row>
         <el-row>
           <el-col span="24">
@@ -61,12 +67,23 @@
           </el-col>
         </el-row>
         <el-row :gutter="10">
-          <el-col :lg="8">
+          <el-col :xs="3" :sm="2" :md="2" :lg="2">
+            &nbsp;
+          </el-col>
+          <el-col :xs="19" :sm="20" :md="20" :lg="8">
             <h2 class="fontTitNosotros">
               Estamos siempre aquí para usted
             </h2>
           </el-col>
-          <el-col :lg="16">
+          <el-col :xs="2" :sm="2" :md="4" :lg="14">
+            &nbsp;
+          </el-col>
+        </el-row>
+        <el-row>
+          <el-col :xs="3" :sm="2" :md="4" :lg="5">
+            &nbsp;
+          </el-col>
+          <el-col :xs="18" :sm="20" :md="18" :lg="17">
             <p class="fontNosotros">
               En GMMCLUB, valoramos a nuestros clientes.
             </p>
@@ -80,6 +97,9 @@
               Estará comercializando sus inversiones de activos digitales en una de las
               plataformas más seguras y confiables disponibles.
             </p>
+          </el-col>
+          <el-col :xs="3" :sm="2" :md="2" :lg="2">
+            &nbsp;
           </el-col>
         </el-row>
         <el-row>
@@ -96,11 +116,11 @@
 </template>
 
 <script>
-  import Icoins from "../components/components/Icoins"
-  import Footer from "../components/components/Footer"
-  import Menu from "../components/components/Menu";
-  export default {
-    name: "nosotros",
+  import Icoins from '../components/components/Icoins'
+  import Footer from '../components/components/Footer'
+  import Menu from '../components/components/Menu'
+export default {
+    name: 'nosotros',
     components: {Menu, Footer, Icoins}
   }
 </script>
@@ -119,7 +139,8 @@
     background-attachment: inherit;
     background-position: center center;
     background-size: cover;
-    padding: 0;
+    padding: 0%;
+    overflow-x: hidden;
   }
   .martitle {
     margin-top: 10em;
@@ -127,48 +148,68 @@
   .marPage {
     margin-bottom: 5em;
   }
-  .fontTitulosW {
-    font-size: 3.4em;
-    color: #FFF;
-    text-align: center;
-    font-weight: bold;
-    padding: 5%;
-    line-height: 50px;
-  }
+
+  /*Textos*/
   @media only screen and (max-width: 576px){
-    .fontTitNosotros{
-      font-size: 1.5rem;
+    .fontTitulosW {
+      font-size: 2em;
       color: #FFF;
-      text-align: left;
+      text-align: center;
       font-weight: bold;
+      padding: 5%;
+      line-height: 50px;
+    }
+    .fontTitNosotros{
+      font-size: 1.2rem;
+      color: #FFF;
+      text-align: justify;
+      font-weight: bold;
+      line-height: 1.5em;
     }
     .fontNosotros{
       font-size: 1.0rem;
       color: #FFF;
-      text-align: left;
+      text-align: justify;
       font-weight: 300;
+      line-height: 1.5em;
 
     }
   }
   @media only screen and (min-width: 577px) and (max-width: 992px){
-    .fontTitNosotros{
-      font-size: 1.9rem;
+    .fontTitulosW {
+      font-size: 2.9em;
       color: #FFF;
-      text-align: left;
+      text-align: center;
       font-weight: bold;
-      margin-left: 0.5em;
+      padding: 5%;
+      line-height: 50px;
+    }
+    .fontTitNosotros{
+      font-size: 1.7rem;
+      color: #FFF;
+      text-align: justify;
+      font-weight: bold;
+      line-height: 1.5em;
     }
     .fontNosotros{
       font-size: 1.2rem;
       color: #FFF;
-      text-align: left;
+      text-align: justify;
       font-weight: 300;
-      margin-left: 0.9em;
+      line-height: 1.5em;
     }
   }
   @media only screen and (min-width: 993px){
+    .fontTitulosW {
+      font-size: 3.4em;
+      color: #FFF;
+      text-align: center;
+      font-weight: bold;
+      padding: 5%;
+      line-height: 50px;
+    }
     .fontTitNosotros{
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       color:#FFF;
       text-align: left;
       font-weight: bold;
@@ -180,6 +221,43 @@
       text-align: justify;
       font-weight: 300;
       line-height: 1.5em;
+    }
+  }
+
+  /*Portada*/
+
+  @media only screen and (max-width: 320px){
+
+    .visibilidad{
+      visibility: hidden;
+    }
+
+    .titulo{
+      margin-top: -45em;
+    }
+  }
+  @media only screen and (min-width: 321px) and (max-width: 639px){
+    .visibilidad{
+      visibility: hidden;
+    }
+    .titulo{
+      margin-top: -57em;
+    }
+  }
+  @media only screen and (min-width: 640px) and (max-width: 767px){
+    .visibilidad{
+      visibility: hidden;
+    }
+    .titulo{
+      margin-top: -69em;
+    }
+  }
+  @media only screen and (min-width: 768px){
+    visibilidad{
+      visibility: visible;
+    }
+    .titulo{
+      margin-top: 0;
     }
   }
 </style>

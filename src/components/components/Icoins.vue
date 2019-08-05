@@ -175,13 +175,13 @@
 
   @media only screen and (max-width: 767px){
     .widthIcos {
-      width: 40%;
+      width: 30%;
     }
   }
 
   @media only screen and (min-width: 768px) and (max-width: 992px){
     .widthIcos {
-      width: 45%;
+      width: 30%;
     }
   }
 

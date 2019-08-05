@@ -3,13 +3,18 @@
       <el-main>
         <div>
           <el-row>
+            <el-col :span="24">
+              &nbsp;
+            </el-col>
+          </el-row>
+          <el-row>
             <el-col class="espacio" :lg="4">
               &nbsp;
             </el-col>
             <el-col :lg="1">
               <img src="../../assets/Imgs/logo_GMM.png" class="logoGMM hidden-md-and-down">
             </el-col>
-            <el-col :lg="2">
+            <el-col :lg="2" >
               <div>
                 <p class="colorMenu">
                   LOGIN
@@ -111,13 +116,14 @@
 
   @media only screen and (min-width: 1201px)  {
     .logoGMM{
-      width: 3.8em;
+      width: 3.3em;
       margin: 0 auto;
       display: block;
     }
     .colorMenu{
       color: white !important;
       text-align: center;
+      display: block;
     }
   }
 
